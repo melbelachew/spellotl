@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Word } from '../types';
-import { pick, speak } from '../utils';
+import { pick, speak, speakAndSpell } from '../utils';
 import { GameHeader } from './GameHeader';
 import { ProgressBar } from './ProgressBar';
 import { Results } from './Results';
@@ -84,6 +84,7 @@ export const SpellingBee: React.FC<Props> = ({ words, onBack, streak, onCorrect,
         <div style={{ fontSize: '13px', color: 'var(--muted)', marginBottom: '8px' }}>Word {index + 1} of {totalQ}</div>
         <div className="bee-controls">
           <button className="tts-btn" onClick={() => speak(item.w)} aria-label="Hear the word spoken aloud">🔊 Hear it</button>
+          <button className="tts-btn" onClick={() => speakAndSpell(item.w)} aria-label="Hear the word spoken and spelled out">✏️ Spell it</button>
           {!showHint && (
             <button className="tts-btn" onClick={() => setShowHint(true)} aria-label="Show hint">💡 Hint</button>
           )}

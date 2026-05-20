@@ -3,7 +3,7 @@ export interface Word {
   d: string;
 }
 
-export type GradeKey = '5th' | '6th' | '7th' | '8th' | '9th' | '10th' | '11th' | '12th' | 'finals' | 'all' | 'custom';
+export type GradeKey = 'K' | '1st' | '2nd' | '3rd' | '4th' | '5th' | '6th' | '7th' | '8th' | '9th' | '10th' | '11th' | '12th' | 'finals' | 'all' | 'custom';
 
 export type GameMode = 'bee' | 'quiz' | 'flash' | 'match';
 

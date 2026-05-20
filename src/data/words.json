@@ -1,4 +1,1014 @@
 {
+  "K": [
+    {
+      "w": "hit",
+      "d": "To strike something"
+    },
+    {
+      "w": "dog",
+      "d": "A common pet that barks"
+    },
+    {
+      "w": "she",
+      "d": "A word used for a girl or woman"
+    },
+    {
+      "w": "dig",
+      "d": "To move earth with a tool or hands"
+    },
+    {
+      "w": "red",
+      "d": "A bright color like a fire truck"
+    },
+    {
+      "w": "bat",
+      "d": "A stick used to hit a ball"
+    },
+    {
+      "w": "cup",
+      "d": "A small container for drinking"
+    },
+    {
+      "w": "day",
+      "d": "The time when the sun is up"
+    },
+    {
+      "w": "bug",
+      "d": "A small insect"
+    },
+    {
+      "w": "tap",
+      "d": "To touch or hit lightly"
+    },
+    {
+      "w": "van",
+      "d": "A large vehicle for carrying people"
+    },
+    {
+      "w": "cap",
+      "d": "A soft flat hat"
+    },
+    {
+      "w": "top",
+      "d": "The highest part of something"
+    },
+    {
+      "w": "sad",
+      "d": "Feeling unhappy"
+    },
+    {
+      "w": "fed",
+      "d": "Gave food to someone"
+    },
+    {
+      "w": "mat",
+      "d": "A flat piece of material on the floor"
+    },
+    {
+      "w": "bed",
+      "d": "A piece of furniture for sleeping"
+    },
+    {
+      "w": "rug",
+      "d": "A thick floor covering"
+    },
+    {
+      "w": "map",
+      "d": "A drawing showing where places are"
+    },
+    {
+      "w": "fog",
+      "d": "A thick cloud close to the ground"
+    },
+    {
+      "w": "sit",
+      "d": "To rest on your bottom"
+    },
+    {
+      "w": "sun",
+      "d": "The bright star that lights our day"
+    },
+    {
+      "w": "dad",
+      "d": "A word for father"
+    },
+    {
+      "w": "hop",
+      "d": "To jump on one foot"
+    },
+    {
+      "w": "wall",
+      "d": "A flat vertical structure"
+    },
+    {
+      "w": "fan",
+      "d": "A device that moves air"
+    },
+    {
+      "w": "ball",
+      "d": "A round object used in games"
+    },
+    {
+      "w": "wag",
+      "d": "To move back and forth"
+    },
+    {
+      "w": "mom",
+      "d": "A word for mother"
+    },
+    {
+      "w": "man",
+      "d": "An adult male person"
+    },
+    {
+      "w": "pet",
+      "d": "A tame animal kept at home"
+    },
+    {
+      "w": "cat",
+      "d": "A furry animal that meows"
+    },
+    {
+      "w": "mop",
+      "d": "A tool for cleaning floors"
+    },
+    {
+      "w": "cut",
+      "d": "To divide with a sharp tool"
+    },
+    {
+      "w": "pig",
+      "d": "A farm animal with a curly tail"
+    },
+    {
+      "w": "fun",
+      "d": "Something enjoyable"
+    },
+    {
+      "w": "fox",
+      "d": "A wild animal like a small dog"
+    },
+    {
+      "w": "hot",
+      "d": "Having a high temperature"
+    },
+    {
+      "w": "jet",
+      "d": "A fast airplane"
+    },
+    {
+      "w": "sat",
+      "d": "Rested in a seated position"
+    },
+    {
+      "w": "pot",
+      "d": "A deep round container for cooking"
+    },
+    {
+      "w": "hat",
+      "d": "A covering worn on the head"
+    },
+    {
+      "w": "hug",
+      "d": "To hold someone tightly with your arms"
+    },
+    {
+      "w": "big",
+      "d": "Large in size"
+    },
+    {
+      "w": "pan",
+      "d": "A flat cooking container"
+    },
+    {
+      "w": "ham",
+      "d": "Meat from a pig"
+    },
+    {
+      "w": "bag",
+      "d": "A container made of soft material"
+    },
+    {
+      "w": "leg",
+      "d": "A limb used for walking"
+    },
+    {
+      "w": "nap",
+      "d": "A short sleep"
+    },
+    {
+      "w": "wet",
+      "d": "Covered with water"
+    }
+  ],
+  "1st": [
+    {
+      "w": "want",
+      "d": "To wish for something"
+    },
+    {
+      "w": "zigzag",
+      "d": "A line that goes back and forth"
+    },
+    {
+      "w": "flop",
+      "d": "To fall or drop heavily"
+    },
+    {
+      "w": "block",
+      "d": "A solid square object"
+    },
+    {
+      "w": "verb",
+      "d": "A word that describes an action"
+    },
+    {
+      "w": "risk",
+      "d": "A chance of danger"
+    },
+    {
+      "w": "pink",
+      "d": "A light red color"
+    },
+    {
+      "w": "ruby",
+      "d": "A red gemstone"
+    },
+    {
+      "w": "helper",
+      "d": "A person who helps others"
+    },
+    {
+      "w": "print",
+      "d": "To write in separate letters"
+    },
+    {
+      "w": "today",
+      "d": "This current day"
+    },
+    {
+      "w": "cool",
+      "d": "Slightly cold or very good"
+    },
+    {
+      "w": "order",
+      "d": "To ask for something or arrange in a sequence"
+    },
+    {
+      "w": "lion",
+      "d": "A large wild cat"
+    },
+    {
+      "w": "snail",
+      "d": "A slow creature with a shell"
+    },
+    {
+      "w": "deer",
+      "d": "A graceful wild animal"
+    },
+    {
+      "w": "trust",
+      "d": "To believe someone is honest"
+    },
+    {
+      "w": "green",
+      "d": "The color of grass"
+    },
+    {
+      "w": "sorry",
+      "d": "Feeling regret for something"
+    },
+    {
+      "w": "draw",
+      "d": "To make a picture with a pencil"
+    },
+    {
+      "w": "also",
+      "d": "In addition; too"
+    },
+    {
+      "w": "wide",
+      "d": "Large from side to side"
+    },
+    {
+      "w": "daze",
+      "d": "A state of confusion"
+    },
+    {
+      "w": "apple",
+      "d": "A round fruit that grows on trees"
+    },
+    {
+      "w": "neck",
+      "d": "The part of the body connecting head to shoulders"
+    },
+    {
+      "w": "milk",
+      "d": "A white drink from cows"
+    },
+    {
+      "w": "chip",
+      "d": "A small thin piece of food"
+    },
+    {
+      "w": "fuss",
+      "d": "To worry about small things"
+    },
+    {
+      "w": "spring",
+      "d": "The season after winter"
+    },
+    {
+      "w": "pear",
+      "d": "A sweet fruit shaped like a teardrop"
+    },
+    {
+      "w": "yoyo",
+      "d": "A toy on a string that goes up and down"
+    },
+    {
+      "w": "fake",
+      "d": "Not real or genuine"
+    },
+    {
+      "w": "boil",
+      "d": "To heat liquid until it bubbles"
+    },
+    {
+      "w": "crown",
+      "d": "A headpiece worn by royalty"
+    },
+    {
+      "w": "zebra",
+      "d": "A black and white striped animal"
+    },
+    {
+      "w": "buzz",
+      "d": "A humming sound like a bee"
+    },
+    {
+      "w": "cute",
+      "d": "Attractive in a pretty way"
+    },
+    {
+      "w": "river",
+      "d": "A large stream of water"
+    },
+    {
+      "w": "yarn",
+      "d": "Thick thread used for knitting"
+    },
+    {
+      "w": "until",
+      "d": "Up to a certain time"
+    },
+    {
+      "w": "jump",
+      "d": "To spring off the ground"
+    },
+    {
+      "w": "storm",
+      "d": "Bad weather with rain and wind"
+    },
+    {
+      "w": "neat",
+      "d": "Tidy and orderly"
+    },
+    {
+      "w": "jokes",
+      "d": "Funny stories or tricks"
+    },
+    {
+      "w": "rally",
+      "d": "To come together for a cause"
+    },
+    {
+      "w": "hook",
+      "d": "A curved piece for hanging things"
+    },
+    {
+      "w": "much",
+      "d": "A large amount"
+    },
+    {
+      "w": "puppy",
+      "d": "A young dog"
+    },
+    {
+      "w": "gray",
+      "d": "A color between black and white"
+    },
+    {
+      "w": "queen",
+      "d": "A female ruler"
+    }
+  ],
+  "2nd": [
+    {
+      "w": "wildcat",
+      "d": "A wild cat that lives in nature"
+    },
+    {
+      "w": "oily",
+      "d": "Covered with or like oil"
+    },
+    {
+      "w": "envy",
+      "d": "Wanting what someone else has"
+    },
+    {
+      "w": "visit",
+      "d": "To go see someone"
+    },
+    {
+      "w": "dentist",
+      "d": "A doctor who takes care of teeth"
+    },
+    {
+      "w": "farmer",
+      "d": "A person who grows food"
+    },
+    {
+      "w": "mitten",
+      "d": "A glove with one section for all fingers"
+    },
+    {
+      "w": "mantle",
+      "d": "A shelf above a fireplace"
+    },
+    {
+      "w": "blink",
+      "d": "To open and close your eyes quickly"
+    },
+    {
+      "w": "trendy",
+      "d": "Very fashionable"
+    },
+    {
+      "w": "torch",
+      "d": "A stick that burns to give light"
+    },
+    {
+      "w": "haven",
+      "d": "A safe place"
+    },
+    {
+      "w": "quart",
+      "d": "A unit of liquid measurement"
+    },
+    {
+      "w": "months",
+      "d": "The twelve divisions of a year"
+    },
+    {
+      "w": "protect",
+      "d": "To keep safe from harm"
+    },
+    {
+      "w": "planet",
+      "d": "A large body orbiting the sun"
+    },
+    {
+      "w": "nobody",
+      "d": "No person at all"
+    },
+    {
+      "w": "angry",
+      "d": "Feeling strong displeasure"
+    },
+    {
+      "w": "campus",
+      "d": "The grounds of a school"
+    },
+    {
+      "w": "heavy",
+      "d": "Having great weight"
+    },
+    {
+      "w": "dragon",
+      "d": "A mythical fire-breathing creature"
+    },
+    {
+      "w": "baseball",
+      "d": "A sport played with a bat and ball"
+    },
+    {
+      "w": "beach",
+      "d": "Sandy land beside the sea"
+    },
+    {
+      "w": "power",
+      "d": "The ability to do something"
+    },
+    {
+      "w": "paddle",
+      "d": "A flat blade used to row a boat"
+    },
+    {
+      "w": "clover",
+      "d": "A small plant with three leaves"
+    },
+    {
+      "w": "mower",
+      "d": "A machine that cuts grass"
+    },
+    {
+      "w": "banjo",
+      "d": "A musical instrument with strings"
+    },
+    {
+      "w": "zipper",
+      "d": "A fastener with teeth that locks together"
+    },
+    {
+      "w": "bogus",
+      "d": "Not genuine; fake"
+    },
+    {
+      "w": "kickstand",
+      "d": "A metal bar that holds a bike upright"
+    },
+    {
+      "w": "idea",
+      "d": "A thought or plan"
+    },
+    {
+      "w": "cheery",
+      "d": "Bright and pleasant"
+    },
+    {
+      "w": "along",
+      "d": "Moving forward"
+    },
+    {
+      "w": "force",
+      "d": "Power or strength"
+    },
+    {
+      "w": "bloom",
+      "d": "To produce flowers"
+    },
+    {
+      "w": "rubber",
+      "d": "An elastic material"
+    },
+    {
+      "w": "friend",
+      "d": "A person you like and trust"
+    },
+    {
+      "w": "inhale",
+      "d": "To breathe in"
+    },
+    {
+      "w": "carrot",
+      "d": "An orange vegetable"
+    },
+    {
+      "w": "stump",
+      "d": "What remains of a cut tree"
+    },
+    {
+      "w": "fixed",
+      "d": "Repaired or made steady"
+    },
+    {
+      "w": "crayon",
+      "d": "A colored wax stick for drawing"
+    },
+    {
+      "w": "solid",
+      "d": "Firm and not liquid"
+    },
+    {
+      "w": "eleven",
+      "d": "The number 11"
+    },
+    {
+      "w": "ladybug",
+      "d": "A small red beetle with black spots"
+    },
+    {
+      "w": "toast",
+      "d": "Bread that has been browned by heat"
+    },
+    {
+      "w": "ouch",
+      "d": "A word said when hurt"
+    },
+    {
+      "w": "timber",
+      "d": "Wood used for building"
+    },
+    {
+      "w": "comb",
+      "d": "A tool for untangling hair"
+    }
+  ],
+  "3rd": [
+    {
+      "w": "indigo",
+      "d": "A deep blue-purple color"
+    },
+    {
+      "w": "uncle",
+      "d": "The brother of your parent"
+    },
+    {
+      "w": "famous",
+      "d": "Known by many people"
+    },
+    {
+      "w": "tulip",
+      "d": "A cup-shaped spring flower"
+    },
+    {
+      "w": "trivia",
+      "d": "Little-known facts"
+    },
+    {
+      "w": "daydream",
+      "d": "To have pleasant thoughts while awake"
+    },
+    {
+      "w": "growl",
+      "d": "A low threatening sound"
+    },
+    {
+      "w": "spaceship",
+      "d": "A vehicle that travels in space"
+    },
+    {
+      "w": "burden",
+      "d": "A heavy load or responsibility"
+    },
+    {
+      "w": "goblet",
+      "d": "A drinking cup with a stem"
+    },
+    {
+      "w": "screech",
+      "d": "A loud sharp cry"
+    },
+    {
+      "w": "talent",
+      "d": "A natural skill or ability"
+    },
+    {
+      "w": "island",
+      "d": "Land surrounded by water"
+    },
+    {
+      "w": "activity",
+      "d": "Something you do"
+    },
+    {
+      "w": "await",
+      "d": "To wait for something"
+    },
+    {
+      "w": "gather",
+      "d": "To collect or bring together"
+    },
+    {
+      "w": "middle",
+      "d": "The center point"
+    },
+    {
+      "w": "betray",
+      "d": "To be disloyal to someone"
+    },
+    {
+      "w": "trumpet",
+      "d": "A brass musical instrument"
+    },
+    {
+      "w": "blouse",
+      "d": "A shirt worn by women"
+    },
+    {
+      "w": "tantrum",
+      "d": "An outburst of anger"
+    },
+    {
+      "w": "together",
+      "d": "With each other"
+    },
+    {
+      "w": "patio",
+      "d": "An outdoor area next to a house"
+    },
+    {
+      "w": "erode",
+      "d": "To wear away gradually"
+    },
+    {
+      "w": "stampede",
+      "d": "A sudden rush of animals or people"
+    },
+    {
+      "w": "lobster",
+      "d": "A sea creature with claws"
+    },
+    {
+      "w": "hedge",
+      "d": "A row of shrubs forming a boundary"
+    },
+    {
+      "w": "watermelon",
+      "d": "A large green fruit with red flesh"
+    },
+    {
+      "w": "abandon",
+      "d": "To leave someone or something behind"
+    },
+    {
+      "w": "private",
+      "d": "Not for public use"
+    },
+    {
+      "w": "window",
+      "d": "A glass opening in a wall"
+    },
+    {
+      "w": "value",
+      "d": "The worth of something"
+    },
+    {
+      "w": "hubcap",
+      "d": "A cover for the center of a wheel"
+    },
+    {
+      "w": "groundhog",
+      "d": "A burrowing animal"
+    },
+    {
+      "w": "melody",
+      "d": "A tune or sequence of musical notes"
+    },
+    {
+      "w": "parlor",
+      "d": "A sitting room in a house"
+    },
+    {
+      "w": "circle",
+      "d": "A perfectly round shape"
+    },
+    {
+      "w": "banter",
+      "d": "Playful and friendly conversation"
+    },
+    {
+      "w": "suspenders",
+      "d": "Straps worn over the shoulders to hold up pants"
+    },
+    {
+      "w": "rescue",
+      "d": "To save from danger"
+    },
+    {
+      "w": "seaweed",
+      "d": "Plants that grow in the ocean"
+    },
+    {
+      "w": "raisin",
+      "d": "A dried grape"
+    },
+    {
+      "w": "chickens",
+      "d": "Farm birds raised for eggs and meat"
+    },
+    {
+      "w": "peanut",
+      "d": "A small legume often made into butter"
+    },
+    {
+      "w": "multiple",
+      "d": "More than one"
+    },
+    {
+      "w": "danger",
+      "d": "The possibility of harm"
+    },
+    {
+      "w": "gemstone",
+      "d": "A precious stone used in jewelry"
+    },
+    {
+      "w": "valley",
+      "d": "Low land between hills"
+    },
+    {
+      "w": "surplus",
+      "d": "More than what is needed"
+    },
+    {
+      "w": "toddler",
+      "d": "A young child learning to walk"
+    }
+  ],
+  "4th": [
+    {
+      "w": "vanity",
+      "d": "Excessive pride in one's appearance"
+    },
+    {
+      "w": "ballad",
+      "d": "A song that tells a story"
+    },
+    {
+      "w": "dandelion",
+      "d": "A yellow wildflower with fluffy seeds"
+    },
+    {
+      "w": "parched",
+      "d": "Very dry or thirsty"
+    },
+    {
+      "w": "limelight",
+      "d": "The center of public attention"
+    },
+    {
+      "w": "coach",
+      "d": "A person who trains others"
+    },
+    {
+      "w": "fractions",
+      "d": "Numbers that represent parts of a whole"
+    },
+    {
+      "w": "apologize",
+      "d": "To say you are sorry"
+    },
+    {
+      "w": "wallow",
+      "d": "To roll around in mud or self-pity"
+    },
+    {
+      "w": "tedious",
+      "d": "Long and boring"
+    },
+    {
+      "w": "hayloft",
+      "d": "A storage space for hay in a barn"
+    },
+    {
+      "w": "guess",
+      "d": "To estimate without knowing for sure"
+    },
+    {
+      "w": "intent",
+      "d": "A plan or purpose"
+    },
+    {
+      "w": "nectarine",
+      "d": "A smooth-skinned fruit like a peach"
+    },
+    {
+      "w": "forecaster",
+      "d": "A person who predicts weather"
+    },
+    {
+      "w": "salsa",
+      "d": "A spicy tomato sauce or a type of dance"
+    },
+    {
+      "w": "truffle",
+      "d": "A rare edible fungus or chocolate candy"
+    },
+    {
+      "w": "volcano",
+      "d": "A mountain that can erupt with lava"
+    },
+    {
+      "w": "bounce",
+      "d": "To spring back after hitting a surface"
+    },
+    {
+      "w": "coupon",
+      "d": "A ticket that gives a discount"
+    },
+    {
+      "w": "skewer",
+      "d": "A long pin for holding food while cooking"
+    },
+    {
+      "w": "iceberg",
+      "d": "A large floating mass of ice"
+    },
+    {
+      "w": "redeem",
+      "d": "To exchange or make up for a fault"
+    },
+    {
+      "w": "emporium",
+      "d": "A large store"
+    },
+    {
+      "w": "squirm",
+      "d": "To wriggle or twist with discomfort"
+    },
+    {
+      "w": "puffin",
+      "d": "A black and white seabird"
+    },
+    {
+      "w": "mussed",
+      "d": "Made untidy or messy"
+    },
+    {
+      "w": "ardor",
+      "d": "Enthusiasm or passion"
+    },
+    {
+      "w": "hoodwink",
+      "d": "To trick or deceive someone"
+    },
+    {
+      "w": "university",
+      "d": "A place of higher education"
+    },
+    {
+      "w": "lapse",
+      "d": "A brief failure or pause"
+    },
+    {
+      "w": "domestic",
+      "d": "Relating to the home or household"
+    },
+    {
+      "w": "doubt",
+      "d": "A feeling of uncertainty"
+    },
+    {
+      "w": "waddle",
+      "d": "To walk with short steps side to side"
+    },
+    {
+      "w": "charity",
+      "d": "Giving help to those in need"
+    },
+    {
+      "w": "poncho",
+      "d": "A cloak with a hole for the head"
+    },
+    {
+      "w": "traverse",
+      "d": "To travel across or through"
+    },
+    {
+      "w": "daughter",
+      "d": "A female child"
+    },
+    {
+      "w": "boomerang",
+      "d": "A curved object that returns when thrown"
+    },
+    {
+      "w": "amulet",
+      "d": "A charm worn for protection"
+    },
+    {
+      "w": "ovation",
+      "d": "Enthusiastic applause"
+    },
+    {
+      "w": "minnow",
+      "d": "A very small fish"
+    },
+    {
+      "w": "lettuce",
+      "d": "A leafy green vegetable used in salads"
+    },
+    {
+      "w": "sitcom",
+      "d": "A funny television series"
+    },
+    {
+      "w": "pixel",
+      "d": "A tiny dot that makes up a digital image"
+    },
+    {
+      "w": "brilliant",
+      "d": "Very bright or very clever"
+    },
+    {
+      "w": "hobnob",
+      "d": "To mix socially with important people"
+    },
+    {
+      "w": "Romeo",
+      "d": "A man who is very romantic"
+    },
+    {
+      "w": "English",
+      "d": "The language spoken in England and America"
+    },
+    {
+      "w": "nitty gritty",
+      "d": "The most important details of something"
+    }
+  ],
   "5th": [
     {
       "w": "journey",

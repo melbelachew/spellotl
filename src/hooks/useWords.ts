@@ -6,13 +6,14 @@ import { loadCustomList, saveCustomList, clearCustomList as clearStorage } from 
 const WORDS: Record<string, Word[]> = wordsData as Record<string, Word[]>;
 
 WORDS.all = [
+  ...WORDS['K'], ...WORDS['1st'], ...WORDS['2nd'], ...WORDS['3rd'], ...WORDS['4th'],
   ...WORDS['5th'], ...WORDS['6th'], ...WORDS['7th'], ...WORDS['8th'],
   ...WORDS['9th'], ...WORDS['10th'], ...WORDS['11th'], ...WORDS['12th'],
   ...WORDS['finals']
 ];
 
-export function useWords() {
-  const [grade, setGradeState] = useState<GradeKey>('5th');
+export function useWords(initialGrade: GradeKey = '5th') {
+  const [grade, setGradeState] = useState<GradeKey>(initialGrade);
   const [customWords, setCustomWords] = useState<Word[]>(loadCustomList);
 
   const getWords = useCallback((): Word[] => {

@@ -1,5 +1,5 @@
 {
-  "name": "spellstar",
+  "name": "spellotl",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
@@ -42,5 +42,5 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://melbelachew.github.io/spellstar"
+  "homepage": "https://melbelachew.github.io/spellotl"
 }

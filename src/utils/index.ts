@@ -8,13 +8,71 @@ export function pick(words: Word[], n: number): Word[] {
   return shuffle(words).slice(0, n);
 }
 
-export function speak(word: string): void {
-  if (!window.speechSynthesis) return;
-  const u = new SpeechSynthesisUtterance(word);
-  u.rate = 0.85;
-  u.pitch = 1.05;
-  window.speechSynthesis.cancel();
+function getBestVoice(): SpeechSynthesisVoice | null {
+  const voices = window.speechSynthesis.getVoices().filter(v => v.lang.startsWith('en'));
+  if (!voices.length) return null;
+  const priority = [
+    (v: SpeechSynthesisVoice) => /premium|enhanced|neural/i.test(v.name) && v.lang === 'en-US',
+    (v: SpeechSynthesisVoice) => /google/i.test(v.name) && v.lang === 'en-US',
+    (v: SpeechSynthesisVoice) => v.lang === 'en-US',
+    (v: SpeechSynthesisVoice) => v.lang.startsWith('en'),
+  ];
+  for (const test of priority) {
+    const match = voices.find(test);
+    if (match) return match;
+  }
+  return voices[0];
+}
+
+function waitForVoices(): Promise<void> {
+  return new Promise(resolve => {
+    if (window.speechSynthesis.getVoices().length > 0) { resolve(); return; }
+    window.speechSynthesis.onvoiceschanged = () => resolve();
+    // Fallback — some browsers never fire onvoiceschanged
+    setTimeout(resolve, 1000);
+  });
+}
+
+async function sayUtterance(text: string, rate = 0.70): Promise<void> {
+  await waitForVoices();
+  const u = new SpeechSynthesisUtterance(text);
+  u.rate = rate;
+  u.pitch = 1.0;
+  const voice = getBestVoice();
+  if (voice) u.voice = voice;
   window.speechSynthesis.speak(u);
+}
+
+export async function speak(word: string): Promise<void> {
+  if (!window.speechSynthesis) return;
+  window.speechSynthesis.cancel();
+  await sayUtterance(word, 0.85);
+}
+
+export async function speakAndSpell(word: string): Promise<void> {
+  if (!window.speechSynthesis) return;
+  window.speechSynthesis.cancel();
+  await waitForVoices();
+  // Say the word
+  const wordU = new SpeechSynthesisUtterance(word);
+  wordU.rate = 0.70;
+  wordU.pitch = 1.0;
+  const voice = getBestVoice();
+  if (voice) wordU.voice = voice;
+  // Spell it out after a pause
+  const spelled = word.split('').join('. ') + '.';
+  const spellU = new SpeechSynthesisUtterance(spelled);
+  spellU.rate = 0.70;
+  spellU.pitch = 1.0;
+  if (voice) spellU.voice = voice;
+  // Say it again after spelling
+  const repeatU = new SpeechSynthesisUtterance(word);
+  repeatU.rate = 0.70;
+  repeatU.pitch = 1.0;
+  if (voice) repeatU.voice = voice;
+  window.speechSynthesis.speak(wordU);
+  window.speechSynthesis.speak(spellU);
+  window.speechSynthesis.speak(repeatU);
 }
 
 export function getMedal(pct: number): { medal: string; msg: string } {
@@ -73,7 +131,7 @@ export function parseWordList(raw: string): Word[] {
   }).filter(x => x.w.length > 0);
 }
 
-export const STORAGE_KEY = 'spellstar_custom';
+export const STORAGE_KEY = 'spellotl_custom';
 
 export function saveCustomList(words: Word[]): void {
   try { localStorage.setItem(STORAGE_KEY, JSON.stringify(words)); } catch {}

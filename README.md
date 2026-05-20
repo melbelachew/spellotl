@@ -1,11 +1,11 @@
-# SpellStar ⭐
+# Spellotl
 
 A React + TypeScript spelling practice app for grades 5–12.
 
 ## Project Structure
 
 ```
-spellstar/
+spellotl/
 ├── public/
 │   └── index.html
 ├── src/
@@ -64,7 +64,7 @@ npm install --save-dev gh-pages
 
 Add to `package.json`:
 ```json
-"homepage": "https://yourusername.github.io/spellstar",
+"homepage": "https://yourusername.github.io/spellotl",
 "scripts": {
   "predeploy": "npm run build",
   "deploy": "gh-pages -d build"

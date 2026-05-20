@@ -3,6 +3,11 @@ import { GradeKey } from '../types';
 
 const GRADES: { key: GradeKey; label: string }[] = [
   { key: 'custom', label: '✏️ My List' },
+  { key: 'K', label: 'Kindergarten' },
+  { key: '1st', label: '1st Grade' },
+  { key: '2nd', label: '2nd Grade' },
+  { key: '3rd', label: '3rd Grade' },
+  { key: '4th', label: '4th Grade' },
   { key: '5th', label: '5th Grade' },
   { key: '6th', label: '6th Grade' },
   { key: '7th', label: '7th Grade' },

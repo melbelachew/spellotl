@@ -1,5 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import './styles/global.css';
+import { GradeBackground } from './components/backgrounds';
 import { GradeKey, GameMode, Word } from './types';
 import { useWords } from './hooks/useWords';
 import { useStreak } from './hooks/useStreak';
@@ -14,10 +15,10 @@ import { MatchUp } from './components/MatchUp';
 type Screen = 'menu' | GameMode;
 
 export default function App() {
-  const { grade, setGrade, getWords, customWords, updateCustomWords, clearCustom, wordCount } = useWords();
+  const { grade, setGrade, getWords, customWords, updateCustomWords, clearCustom, wordCount } = useWords('custom');
   const { streak, increment, reset } = useStreak();
   const [screen, setScreen] = useState<Screen>('menu');
-  const [showCustomPanel, setShowCustomPanel] = useState(false);
+  const [showCustomPanel, setShowCustomPanel] = useState(true);
   const [editingList, setEditingList] = useState(false);
 
   const handleGradeChange = useCallback((g: GradeKey) => {
@@ -69,9 +70,11 @@ export default function App() {
   return (
     <>
       <a href="#main-content" className="skip-link">Skip to content</a>
-      <div className="app" role="main">
+      <GradeBackground grade={grade} />
+      <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', position: 'relative', zIndex: 1 }}>
+      <div className="app" role="main" style={{ flex: 1 }}>
         <div className="top-bar">
-          <h1 className="logo">Spell<span>Star</span> ⭐</h1>
+          <h1 className="logo">Spellotl🦎 </h1>
         </div>
 
         {screen === 'menu' && (
@@ -133,6 +136,27 @@ export default function App() {
             onReset={reset}
           />
         )}
+      </div>
+      <footer style={{
+        position: 'relative',
+        zIndex: 1,
+        marginTop: 'auto',
+        padding: '2rem 1rem 1.5rem',
+        borderTop: '1px solid var(--border)',
+      }}>
+        <p style={{
+          maxWidth: '680px',
+          margin: '0 auto',
+          textAlign: 'center',
+          fontSize: '11px',
+          color: 'var(--muted)',
+          lineHeight: '1.7',
+        }}>
+          Spellotl is an independent practice tool and is not affiliated with, endorsed by, or sponsored by any official spelling bee organization. Word lists and definitions are provided for practice purposes only. Errors may occur. The creator assumes no liability for inaccuracies or outcomes resulting from use of this application.
+          <br /><br />
+          For feedback or to report issues, contact <a href="mailto:spellersrstarts@gmail.com" style={{color: 'var(--muted)', textDecoration: 'underline'}}>spellersrstarts@gmail.com</a>
+        </p>
+      </footer>
       </div>
     </>
   );
