@@ -27,7 +27,7 @@ body {
 h1, h2, h3 { font-family: var(--font-head); }
 
 .app {
-  max-width: 680px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 1rem;
 }

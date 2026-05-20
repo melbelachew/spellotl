@@ -72,8 +72,8 @@ export default function App() {
     <>
       <a href="#main-content" className="skip-link">Skip to content</a>
       <GradeBackground grade={grade} />
-      <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', position: 'relative', zIndex: 1 }}>
-      <div className="app" role="main" style={{ flex: 1 }}>
+      <div style={{ position: 'relative', zIndex: 1 }}>
+      <div className="app" role="main">
         <div className="top-bar">
           <h1 className="logo">Spellotl🦎 </h1>
         </div>
@@ -141,12 +141,12 @@ export default function App() {
       <footer style={{
         position: 'relative',
         zIndex: 1,
-        marginTop: 'auto',
+        marginTop: '20rem',
         padding: '2rem 1rem 1.5rem',
         borderTop: '1px solid var(--border)',
       }}>
         <p style={{
-          maxWidth: '680px',
+          maxWidth: '900px',
           margin: '0 auto',
           textAlign: 'center',
           fontSize: '11px',
