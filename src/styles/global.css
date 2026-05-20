@@ -368,3 +368,57 @@ h1, h2, h3 { font-family: var(--font-head); }
   .match-grid { grid-template-columns: repeat(3, 1fr); }
   .choices { grid-template-columns: 1fr 1fr; }
 }
+
+/* PWA install prompt */
+.install-prompt {
+  position: fixed;
+  left: 50%;
+  bottom: 16px;
+  transform: translateX(-50%);
+  width: calc(100% - 24px);
+  max-width: 420px;
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(44, 35, 64, 0.18);
+  padding: 14px 14px 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 1000;
+  animation: install-prompt-in 0.25s ease-out;
+}
+@keyframes install-prompt-in {
+  from { opacity: 0; transform: translate(-50%, 16px); }
+  to   { opacity: 1; transform: translate(-50%, 0); }
+}
+.install-prompt__icon { font-size: 1.75rem; line-height: 1; }
+.install-prompt__body { flex: 1; min-width: 0; }
+.install-prompt__title {
+  display: block;
+  font-family: var(--font-head);
+  color: var(--accent2);
+  font-size: 1.05rem;
+  margin-bottom: 2px;
+}
+.install-prompt__text { font-size: 0.875rem; color: var(--muted); line-height: 1.35; }
+.install-prompt__actions { display: flex; align-items: center; gap: 6px; }
+.install-prompt__install { padding: 8px 14px; font-size: 13px; }
+.install-prompt__close {
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  font-size: 1.1rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.install-prompt__close:hover { background: rgba(0, 0, 0, 0.05); color: var(--text); }
+@media (max-width: 380px) {
+  .install-prompt__icon { display: none; }
+}

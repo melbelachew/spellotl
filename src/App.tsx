@@ -11,6 +11,7 @@ import { SpellingBee } from './components/SpellingBee';
 import { WhichWord } from './components/WhichWord';
 import { FlashCards } from './components/FlashCards';
 import { MatchUp } from './components/MatchUp';
+import InstallPrompt from './components/InstallPrompt';
 
 type Screen = 'menu' | GameMode;
 
@@ -158,6 +159,7 @@ export default function App() {
         </p>
       </footer>
       </div>
+      <InstallPrompt />
     </>
   );
 }
