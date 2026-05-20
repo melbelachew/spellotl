@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/spellstar/static/css/main.ad262710.css",
+    "main.js": "/spellstar/static/js/main.41c9a23b.js",
+    "index.html": "/spellstar/index.html",
+    "main.ad262710.css.map": "/spellstar/static/css/main.ad262710.css.map",
+    "main.41c9a23b.js.map": "/spellstar/static/js/main.41c9a23b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ad262710.css",
+    "static/js/main.41c9a23b.js"
+  ]
+}

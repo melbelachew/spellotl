@@ -1,0 +1,2032 @@
+{
+  "5th": [
+    {
+      "w": "journey",
+      "d": "A long trip or travel"
+    },
+    {
+      "w": "vineyard",
+      "d": "A farm where grapes are grown"
+    },
+    {
+      "w": "neigh",
+      "d": "The sound a horse makes"
+    },
+    {
+      "w": "bandanna",
+      "d": "A large colorful handkerchief"
+    },
+    {
+      "w": "visual",
+      "d": "Related to sight or seeing"
+    },
+    {
+      "w": "widget",
+      "d": "A small mechanical device"
+    },
+    {
+      "w": "assure",
+      "d": "To tell someone something will happen"
+    },
+    {
+      "w": "quince",
+      "d": "A yellow pear-like fruit"
+    },
+    {
+      "w": "sirloin",
+      "d": "A cut of beef from the back"
+    },
+    {
+      "w": "appreciate",
+      "d": "To value or be grateful for"
+    },
+    {
+      "w": "butterscotch",
+      "d": "A candy made with butter and brown sugar"
+    },
+    {
+      "w": "tongue",
+      "d": "The muscle in your mouth used for tasting"
+    },
+    {
+      "w": "binoculars",
+      "d": "Two small telescopes for both eyes"
+    },
+    {
+      "w": "iota",
+      "d": "A very small amount"
+    },
+    {
+      "w": "ultimatum",
+      "d": "A final demand with a threat"
+    },
+    {
+      "w": "shoulder",
+      "d": "The joint connecting arm to body"
+    },
+    {
+      "w": "jostle",
+      "d": "To push and shove in a crowd"
+    },
+    {
+      "w": "faculty",
+      "d": "The teachers of a school"
+    },
+    {
+      "w": "bizarro",
+      "d": "Very strange or unusual"
+    },
+    {
+      "w": "credulity",
+      "d": "Willingness to believe too easily"
+    },
+    {
+      "w": "novelist",
+      "d": "A person who writes novels"
+    },
+    {
+      "w": "earnestly",
+      "d": "In a sincere, serious manner"
+    },
+    {
+      "w": "explosive",
+      "d": "Something that can blow up"
+    },
+    {
+      "w": "full-fledged",
+      "d": "Fully developed or qualified"
+    },
+    {
+      "w": "ingot",
+      "d": "A block of cast metal"
+    },
+    {
+      "w": "ritziness",
+      "d": "The quality of being very fancy"
+    },
+    {
+      "w": "session",
+      "d": "A meeting or period of activity"
+    },
+    {
+      "w": "agenda",
+      "d": "A list of things to be done"
+    },
+    {
+      "w": "lexicon",
+      "d": "The vocabulary of a language"
+    },
+    {
+      "w": "genuine",
+      "d": "Truly what it claims to be"
+    },
+    {
+      "w": "gainsay",
+      "d": "To deny or contradict"
+    },
+    {
+      "w": "fluency",
+      "d": "The ability to speak smoothly"
+    },
+    {
+      "w": "relative",
+      "d": "A family member"
+    },
+    {
+      "w": "quibble",
+      "d": "To argue about small things"
+    },
+    {
+      "w": "seethe",
+      "d": "To be very angry inside"
+    },
+    {
+      "w": "soften",
+      "d": "To make less hard or harsh"
+    },
+    {
+      "w": "knead",
+      "d": "To press and fold dough"
+    },
+    {
+      "w": "hazelnut",
+      "d": "A small edible nut"
+    },
+    {
+      "w": "magician",
+      "d": "A person who performs magic tricks"
+    },
+    {
+      "w": "parameters",
+      "d": "Rules or limits for a situation"
+    },
+    {
+      "w": "celebrate",
+      "d": "To do something fun for a special occasion"
+    },
+    {
+      "w": "bribery",
+      "d": "Offering money to influence someone"
+    },
+    {
+      "w": "stalwart",
+      "d": "Loyal, reliable, and hardworking"
+    },
+    {
+      "w": "surrogate",
+      "d": "A substitute or replacement"
+    },
+    {
+      "w": "tussle",
+      "d": "A fight or struggle"
+    },
+    {
+      "w": "molecule",
+      "d": "The smallest unit of a chemical compound"
+    },
+    {
+      "w": "curator",
+      "d": "A person who manages a museum collection"
+    },
+    {
+      "w": "recluse",
+      "d": "A person who lives in isolation"
+    }
+  ],
+  "6th": [
+    {
+      "w": "gambol",
+      "d": "To skip and jump playfully"
+    },
+    {
+      "w": "en route",
+      "d": "On the way to somewhere"
+    },
+    {
+      "w": "iteration",
+      "d": "One repetition of a process"
+    },
+    {
+      "w": "debilitate",
+      "d": "To make someone very weak"
+    },
+    {
+      "w": "verve",
+      "d": "Enthusiasm and energy"
+    },
+    {
+      "w": "fragile",
+      "d": "Easily broken or damaged"
+    },
+    {
+      "w": "gung ho",
+      "d": "Very enthusiastic and eager"
+    },
+    {
+      "w": "bona fide",
+      "d": "Genuine and authentic"
+    },
+    {
+      "w": "slovenly",
+      "d": "Messy and untidy"
+    },
+    {
+      "w": "cajole",
+      "d": "To persuade by flattery"
+    },
+    {
+      "w": "prolific",
+      "d": "Producing a lot of work"
+    },
+    {
+      "w": "cinnamon",
+      "d": "A sweet warm spice from bark"
+    },
+    {
+      "w": "havoc",
+      "d": "Widespread chaos and destruction"
+    },
+    {
+      "w": "flourish",
+      "d": "To grow and thrive"
+    },
+    {
+      "w": "mosquito",
+      "d": "A small blood-sucking insect"
+    },
+    {
+      "w": "veteran",
+      "d": "Someone with long experience"
+    },
+    {
+      "w": "phonics",
+      "d": "A method of teaching reading by sounds"
+    },
+    {
+      "w": "crucial",
+      "d": "Extremely important"
+    },
+    {
+      "w": "whey",
+      "d": "The liquid part of curdled milk"
+    },
+    {
+      "w": "celestial",
+      "d": "Relating to the sky or heavens"
+    },
+    {
+      "w": "portrait",
+      "d": "A painting or photo of a person"
+    },
+    {
+      "w": "arrogant",
+      "d": "Having an exaggerated sense of self"
+    },
+    {
+      "w": "skirmish",
+      "d": "A brief fight or conflict"
+    },
+    {
+      "w": "ghastly",
+      "d": "Causing great horror or disgust"
+    },
+    {
+      "w": "sesame",
+      "d": "A plant whose seeds are used in cooking"
+    },
+    {
+      "w": "jettison",
+      "d": "To throw overboard or discard"
+    },
+    {
+      "w": "albeit",
+      "d": "Even though, although"
+    },
+    {
+      "w": "nostalgia",
+      "d": "A longing for the past"
+    },
+    {
+      "w": "nourish",
+      "d": "To provide with food and nutrients"
+    },
+    {
+      "w": "goliath",
+      "d": "A giant or very large person"
+    },
+    {
+      "w": "indulgent",
+      "d": "Allowing too much pleasure"
+    },
+    {
+      "w": "irrigation",
+      "d": "Supplying water to land for crops"
+    },
+    {
+      "w": "paunch",
+      "d": "A large protruding belly"
+    },
+    {
+      "w": "minuscule",
+      "d": "Extremely tiny"
+    },
+    {
+      "w": "ammunition",
+      "d": "Bullets and explosives for weapons"
+    },
+    {
+      "w": "berserk",
+      "d": "Out of control with anger"
+    },
+    {
+      "w": "devotee",
+      "d": "A very enthusiastic follower"
+    },
+    {
+      "w": "thyme",
+      "d": "An herb used in cooking"
+    },
+    {
+      "w": "wraith",
+      "d": "A ghost or spirit"
+    },
+    {
+      "w": "premises",
+      "d": "A building and its grounds"
+    },
+    {
+      "w": "edification",
+      "d": "Moral or intellectual improvement"
+    },
+    {
+      "w": "guffaw",
+      "d": "A loud burst of laughter"
+    },
+    {
+      "w": "jocularity",
+      "d": "A playful and humorous manner"
+    },
+    {
+      "w": "valorous",
+      "d": "Brave and courageous"
+    },
+    {
+      "w": "modicum",
+      "d": "A small amount of something"
+    },
+    {
+      "w": "outrageous",
+      "d": "Shockingly bad or excessive"
+    },
+    {
+      "w": "squirrelly",
+      "d": "Restless and unpredictable"
+    },
+    {
+      "w": "ruminate",
+      "d": "To think deeply about something"
+    }
+  ],
+  "7th": [
+    {
+      "w": "abundant",
+      "d": "Existing or available in large quantities; plentiful"
+    },
+    {
+      "w": "accomplice",
+      "d": "A person who helps another commit a crime"
+    },
+    {
+      "w": "apprehensive",
+      "d": "Anxious or fearful that something bad will happen"
+    },
+    {
+      "w": "barren",
+      "d": "Too poor to produce much or any vegetation"
+    },
+    {
+      "w": "bizarre",
+      "d": "Very strange or unusual, especially so as to cause interest"
+    },
+    {
+      "w": "cacophony",
+      "d": "A harsh, discordant mixture of sounds"
+    },
+    {
+      "w": "chronological",
+      "d": "Starting with the earliest and following the order in which they occurred"
+    },
+    {
+      "w": "commotion",
+      "d": "A state of confused and noisy disturbance"
+    },
+    {
+      "w": "conspicuous",
+      "d": "Clearly visible or attracting notice and attention"
+    },
+    {
+      "w": "conspire",
+      "d": "Make secret plans jointly to commit an unlawful or harmful act"
+    },
+    {
+      "w": "delectable",
+      "d": "Delicious or extremely beautiful and attractive"
+    },
+    {
+      "w": "dismal",
+      "d": "Depressing, dreary, gloomy, or cheerless"
+    },
+    {
+      "w": "eerie",
+      "d": "Strange and frightening, suggesting a connection with the supernatural"
+    },
+    {
+      "w": "exasperation",
+      "d": "A feeling of intense irritation or annoyance"
+    },
+    {
+      "w": "falter",
+      "d": "Start to lose strength or momentum; speak or move hesitantly"
+    },
+    {
+      "w": "foreshadow",
+      "d": "Be a warning or indication of a future event"
+    },
+    {
+      "w": "grueling",
+      "d": "Extremely tiring and demanding to the point of exhaustion"
+    },
+    {
+      "w": "habitation",
+      "d": "The state or process of living in a particular place"
+    },
+    {
+      "w": "ignite",
+      "d": "Catch fire or cause to catch fire"
+    },
+    {
+      "w": "illuminated",
+      "d": "Lit up or decorated with bright lights"
+    },
+    {
+      "w": "imminent",
+      "d": "About to happen; fast approaching"
+    },
+    {
+      "w": "imperative",
+      "d": "Of vital importance; crucial"
+    },
+    {
+      "w": "jostle",
+      "d": "Push, elbow, or bump against someone roughly, typically in a crowd"
+    },
+    {
+      "w": "kindle",
+      "d": "Light a fire, or inspire an emotion or feeling"
+    },
+    {
+      "w": "luminous",
+      "d": "Full of or shedding light; bright or shining, especially in the dark"
+    },
+    {
+      "w": "malleable",
+      "d": "Able to be hammered or pressed permanently out of shape without breaking"
+    },
+    {
+      "w": "meander",
+      "d": "Follow a winding course, or wander at random"
+    },
+    {
+      "w": "monotonous",
+      "d": "Dull, tedious, and repetitious; lacking in variety and interest"
+    },
+    {
+      "w": "muster",
+      "d": "Assemble troops or gather up a feeling or support"
+    },
+    {
+      "w": "narrative",
+      "d": "A spoken or written account of connected events; a story"
+    },
+    {
+      "w": "ominous",
+      "d": "Giving the impression that something bad or unpleasant is going to happen"
+    },
+    {
+      "w": "outrageous",
+      "d": "Shockingly bad, excessive, or unconventional"
+    },
+    {
+      "w": "plenteous",
+      "d": "Plentiful or existing in large amounts"
+    },
+    {
+      "w": "precipice",
+      "d": "A very steep rock face or cliff, typically a very high one"
+    },
+    {
+      "w": "quell",
+      "d": "Put an end to a rebellion or disorder, typically by force"
+    },
+    {
+      "w": "recluse",
+      "d": "A person who lives a solitary life and tends to avoid other people"
+    },
+    {
+      "w": "replenish",
+      "d": "Fill something up again; restore to a former level or condition"
+    },
+    {
+      "w": "sabotage",
+      "d": "Deliberately destroy, damage, or obstruct something"
+    },
+    {
+      "w": "scarcity",
+      "d": "The state of being in short supply; a shortage"
+    },
+    {
+      "w": "scurry",
+      "d": "Move hurriedly with short quick steps"
+    },
+    {
+      "w": "somber",
+      "d": "Dark or dull in color or tone; gloomy or serious"
+    },
+    {
+      "w": "specimen",
+      "d": "An individual animal, plant, or mineral used as an example of its species"
+    },
+    {
+      "w": "swagger",
+      "d": "Walk or behave in a very confident and typically arrogant way"
+    },
+    {
+      "w": "terse",
+      "d": "Sparing in the use of words; abrupt or concise"
+    },
+    {
+      "w": "uncanny",
+      "d": "Strange or mysterious, especially in an unsettling way"
+    },
+    {
+      "w": "unsightly",
+      "d": "Unpleasant to look at; ugly or messy"
+    },
+    {
+      "w": "vigilant",
+      "d": "Keeping careful watch for possible danger or difficulties"
+    },
+    {
+      "w": "vulnerable",
+      "d": "Susceptible to physical or emotional attack or harm"
+    },
+    {
+      "w": "waft",
+      "d": "Pass or cause to pass easily or gently through the air"
+    },
+    {
+      "w": "waver",
+      "d": "Shake with a quivering motion; become unsteady or unreliable"
+    },
+    {
+      "w": "zeal",
+      "d": "Great energy or enthusiasm in pursuit of a cause or objective"
+    }
+  ],
+  "8th": [
+    {
+      "w": "alleviate",
+      "d": "Make suffering or a problem less severe"
+    },
+    {
+      "w": "animosity",
+      "d": "Strong hostility or friction between people"
+    },
+    {
+      "w": "arbitrary",
+      "d": "Based on random choice rather than reason"
+    },
+    {
+      "w": "audacious",
+      "d": "Showing a willingness to take surprisingly bold risks"
+    },
+    {
+      "w": "benevolent",
+      "d": "Well-meaning, kindly, or serving a charitable purpose"
+    },
+    {
+      "w": "capricious",
+      "d": "Given to sudden and unaccountable changes of mood"
+    },
+    {
+      "w": "chastise",
+      "d": "Rebuke or reprimand severely for wrongdoing"
+    },
+    {
+      "w": "cognizant",
+      "d": "Having knowledge or being aware of something"
+    },
+    {
+      "w": "corroborate",
+      "d": "Confirm or give support to a statement or theory"
+    },
+    {
+      "w": "dearth",
+      "d": "A scarcity or lack of something"
+    },
+    {
+      "w": "deferential",
+      "d": "Showing respect and high regard to a superior"
+    },
+    {
+      "w": "diligence",
+      "d": "Careful and persistent work or effort"
+    },
+    {
+      "w": "disparate",
+      "d": "Essentially different in kind and not allowing comparison"
+    },
+    {
+      "w": "eccentric",
+      "d": "Unconventional and slightly strange behavior"
+    },
+    {
+      "w": "emulate",
+      "d": "Match or surpass a person or achievement by imitation"
+    },
+    {
+      "w": "ephemeral",
+      "d": "Lasting for a very short time"
+    },
+    {
+      "w": "esoteric",
+      "d": "Intended for or likely to be understood by only a few"
+    },
+    {
+      "w": "exacerbate",
+      "d": "Make a problem or bad situation worse"
+    },
+    {
+      "w": "fallacious",
+      "d": "Based on a mistaken belief or faulty reasoning"
+    },
+    {
+      "w": "fastidious",
+      "d": "Very attentive to and concerned about accuracy and detail"
+    },
+    {
+      "w": "fortuitous",
+      "d": "Happening by accident or chance rather than design"
+    },
+    {
+      "w": "frivolous",
+      "d": "Not having any serious purpose or value"
+    },
+    {
+      "w": "gregarious",
+      "d": "Fond of company and highly sociable"
+    },
+    {
+      "w": "impetuous",
+      "d": "Acting or done quickly and without thought or care"
+    },
+    {
+      "w": "indigenous",
+      "d": "Originating or occurring naturally in a particular place"
+    },
+    {
+      "w": "inherent",
+      "d": "Existing in something as a permanent or essential attribute"
+    },
+    {
+      "w": "innocuous",
+      "d": "Not harmful or offensive in any way"
+    },
+    {
+      "w": "intrepid",
+      "d": "Fearless and adventurous in the face of danger"
+    },
+    {
+      "w": "judicious",
+      "d": "Having, showing, or done with good judgment or sense"
+    },
+    {
+      "w": "laconic",
+      "d": "Using very few words in writing or speech"
+    },
+    {
+      "w": "malevolent",
+      "d": "Having or showing a wish to do evil to others"
+    },
+    {
+      "w": "meticulous",
+      "d": "Showing great attention to detail and very careful"
+    },
+    {
+      "w": "nefarious",
+      "d": "Wicked or criminal action or activity"
+    },
+    {
+      "w": "obsolete",
+      "d": "No longer produced or used; out of date"
+    },
+    {
+      "w": "ostentatious",
+      "d": "Characterized by vulgar or pretentious display"
+    },
+    {
+      "w": "pragmatic",
+      "d": "Dealing with things sensibly and realistically"
+    },
+    {
+      "w": "precarious",
+      "d": "Not securely held or in a position likely to fall"
+    },
+    {
+      "w": "propensity",
+      "d": "An inclination or natural tendency to behave in a way"
+    },
+    {
+      "w": "redundant",
+      "d": "Not or no longer needed or useful; superfluous"
+    },
+    {
+      "w": "scrutinize",
+      "d": "Examine or inspect closely and thoroughly"
+    },
+    {
+      "w": "spurious",
+      "d": "Not being what it purports to be; false or fake"
+    },
+    {
+      "w": "superfluous",
+      "d": "Unnecessary, especially through being more than enough"
+    },
+    {
+      "w": "surreptitious",
+      "d": "Kept secret, especially because it would not be approved"
+    },
+    {
+      "w": "tenacious",
+      "d": "Tending to keep a firm hold of something; clinging"
+    },
+    {
+      "w": "transient",
+      "d": "Lasting only for a short time; impermanent"
+    },
+    {
+      "w": "vehement",
+      "d": "Showing strong feeling; forceful, passionate, or intense"
+    },
+    {
+      "w": "vindicate",
+      "d": "Clear someone of blame or suspicion"
+    },
+    {
+      "w": "zealous",
+      "d": "Having or showing great energy or enthusiasm"
+    }
+  ],
+  "9th": [
+    {
+      "w": "aberration",
+      "d": "A departure from what is normal, usual, or expected"
+    },
+    {
+      "w": "abnegation",
+      "d": "The act of renouncing or rejecting something"
+    },
+    {
+      "w": "acquiesce",
+      "d": "Accept something reluctantly but without protest"
+    },
+    {
+      "w": "aesthetic",
+      "d": "Concerned with beauty or the appreciation of beauty"
+    },
+    {
+      "w": "alacrity",
+      "d": "Brisk and cheerful readiness or willingness"
+    },
+    {
+      "w": "anachronism",
+      "d": "A thing belonging to a period other than that in which it exists"
+    },
+    {
+      "w": "anomaly",
+      "d": "Something that deviates from what is standard, normal, or expected"
+    },
+    {
+      "w": "austere",
+      "d": "Severe or strict in manner, attitude, or appearance"
+    },
+    {
+      "w": "capitulate",
+      "d": "Cease to resist an opponent or an unwelcome demand"
+    },
+    {
+      "w": "catalyst",
+      "d": "A person or thing that precipitates an event or change"
+    },
+    {
+      "w": "churlish",
+      "d": "Rude in a mean-spirited and surly way"
+    },
+    {
+      "w": "clandestine",
+      "d": "Kept secret or done secretively, especially because illicit"
+    },
+    {
+      "w": "collusion",
+      "d": "Secret or illegal cooperation or conspiracy to deceive others"
+    },
+    {
+      "w": "decorum",
+      "d": "Behavior in keeping with good taste and propriety"
+    },
+    {
+      "w": "deleterious",
+      "d": "Causing harm or damage to health or well-being"
+    },
+    {
+      "w": "dichotomy",
+      "d": "A division or contrast between two things that are opposed"
+    },
+    {
+      "w": "didactic",
+      "d": "Intended to teach, particularly in having moral instruction"
+    },
+    {
+      "w": "diffident",
+      "d": "Modest or shy because of a lack of self-confidence"
+    },
+    {
+      "w": "epiphany",
+      "d": "A moment of sudden and great revelation or realization"
+    },
+    {
+      "w": "epitome",
+      "d": "A person or thing that is a perfect example of a quality"
+    },
+    {
+      "w": "equivocal",
+      "d": "Open to more than one interpretation; ambiguous"
+    },
+    {
+      "w": "esoteric",
+      "d": "Intended for or likely to be understood by only a few"
+    },
+    {
+      "w": "euphemism",
+      "d": "A mild expression substituted for one considered too harsh"
+    },
+    {
+      "w": "facetious",
+      "d": "Treating serious issues with deliberately inappropriate humor"
+    },
+    {
+      "w": "garrulous",
+      "d": "Excessively talkative, especially on trivial matters"
+    },
+    {
+      "w": "harangue",
+      "d": "A lengthy and aggressive speech or lecture"
+    },
+    {
+      "w": "hubris",
+      "d": "Excessive pride or dangerous self-confidence"
+    },
+    {
+      "w": "idiosyncrasy",
+      "d": "A mode of behavior or thought peculiar to an individual"
+    },
+    {
+      "w": "impetuous",
+      "d": "Acting or done quickly and without thought or care"
+    },
+    {
+      "w": "inherent",
+      "d": "Existing in something as a permanent or essential attribute"
+    },
+    {
+      "w": "insidious",
+      "d": "Proceeding in a gradual, subtle way, but with harmful effects"
+    },
+    {
+      "w": "juxtapose",
+      "d": "Place close together for contrasting effect"
+    },
+    {
+      "w": "levity",
+      "d": "Humor or frivolity, especially the treatment of a serious matter"
+    },
+    {
+      "w": "loquacious",
+      "d": "Tending to talk a great deal; extremely talkative"
+    },
+    {
+      "w": "magnanimous",
+      "d": "Generous or forgiving, especially toward a rival or less powerful person"
+    },
+    {
+      "w": "meticulous",
+      "d": "Showing great attention to detail; very careful and precise"
+    },
+    {
+      "w": "nefarious",
+      "d": "Wicked, villainous, or criminal action or activity"
+    },
+    {
+      "w": "nihilism",
+      "d": "The rejection of all religious and moral principles"
+    },
+    {
+      "w": "obfuscate",
+      "d": "Render obscure, unclear, or unintelligible"
+    },
+    {
+      "w": "omnipotent",
+      "d": "Having unlimited power; able to do anything"
+    },
+    {
+      "w": "paradigm",
+      "d": "A typical example or pattern of something; a model"
+    },
+    {
+      "w": "paucity",
+      "d": "The presence of something only in small or insufficient quantities"
+    },
+    {
+      "w": "perfunctory",
+      "d": "Carried out with a minimum of effort or reflection"
+    },
+    {
+      "w": "platitude",
+      "d": "A remark or statement used too often to be interesting"
+    },
+    {
+      "w": "plethora",
+      "d": "A large or excessive amount of something"
+    },
+    {
+      "w": "precarious",
+      "d": "Not securely held or in a position likely to fall or collapse"
+    },
+    {
+      "w": "recalcitrant",
+      "d": "Having an obstinately uncooperative attitude toward authority"
+    },
+    {
+      "w": "rhetoric",
+      "d": "The art of effective or persuasive speaking or writing"
+    },
+    {
+      "w": "salient",
+      "d": "Most noticeable or important; prominent"
+    },
+    {
+      "w": "scrupulous",
+      "d": "Diligent, thorough, and extremely attentive to details"
+    },
+    {
+      "w": "subjugate",
+      "d": "Bring under domain or control, especially by conquest"
+    },
+    {
+      "w": "superfluous",
+      "d": "Unnecessary, especially through being more than enough"
+    },
+    {
+      "w": "surreptitious",
+      "d": "Kept secret, especially because it would not be approved of"
+    },
+    {
+      "w": "taciturn",
+      "d": "Reserved or uncommunicative in speech; saying little"
+    },
+    {
+      "w": "tenacious",
+      "d": "Tending to keep a firm hold of something; clinging or stubborn"
+    },
+    {
+      "w": "ubiquitous",
+      "d": "Present, appearing, or found everywhere"
+    },
+    {
+      "w": "vehement",
+      "d": "Showing strong feeling; forceful, passionate, or intense"
+    },
+    {
+      "w": "venerable",
+      "d": "Accorded a great deal of respect, especially because of age, wisdom, or character"
+    },
+    {
+      "w": "vociferous",
+      "d": "Vehement or clamorous; crying out noisily"
+    },
+    {
+      "w": "wary",
+      "d": "Feeling or showing caution about possible dangers or problems"
+    },
+    {
+      "w": "zealous",
+      "d": "Having or showing great energy or enthusiasm in pursuit of a cause"
+    }
+  ],
+  "10th": [
+    {
+      "w": "abscond",
+      "d": "Leave hurriedly and secretly, typically to avoid detection or arrest"
+    },
+    {
+      "w": "acrimonious",
+      "d": "Angry and bitter, typically in speech or debate"
+    },
+    {
+      "w": "adulation",
+      "d": "Excessive admiration or praise; flattery"
+    },
+    {
+      "w": "anathema",
+      "d": "Something or someone that one vehemently dislikes"
+    },
+    {
+      "w": "assiduous",
+      "d": "Showing great care, attention, and effort"
+    },
+    {
+      "w": "asylum",
+      "d": "Protection granted by a nation to someone who has left their native country as a political refugee"
+    },
+    {
+      "w": "bellwether",
+      "d": "An indicator or predictor of something; a leader"
+    },
+    {
+      "w": "capricious",
+      "d": "Given to sudden and unaccountable changes of mood or behavior"
+    },
+    {
+      "w": "castigate",
+      "d": "Reprimand someone severely; punish or criticize harshly"
+    },
+    {
+      "w": "catharsis",
+      "d": "The process of releasing, and thereby providing relief from, strong or repressed emotions"
+    },
+    {
+      "w": "caustic",
+      "d": "Sarcastic in a scathing and bitter way"
+    },
+    {
+      "w": "chicanery",
+      "d": "The use of trickery to achieve a political, financial, or legal purpose"
+    },
+    {
+      "w": "circuitous",
+      "d": "Longer than the most direct way; roundabout"
+    },
+    {
+      "w": "cogent",
+      "d": "Clear, logical, and convincing in an argument"
+    },
+    {
+      "w": "compunction",
+      "d": "A feeling of guilt or moral scruple that prevents or follows the doing of something bad"
+    },
+    {
+      "w": "conundrum",
+      "d": "A confusing and difficult problem or question"
+    },
+    {
+      "w": "copious",
+      "d": "Abundant in supply or quantity"
+    },
+    {
+      "w": "craven",
+      "d": "Contemptibly lacking in courage; cowardly"
+    },
+    {
+      "w": "deference",
+      "d": "Humble submission and respect"
+    },
+    {
+      "w": "demagogue",
+      "d": "A political leader who seeks support by appealing to popular desires and prejudices"
+    },
+    {
+      "w": "derision",
+      "d": "Contemptuous ridicule or mockery"
+    },
+    {
+      "w": "despot",
+      "d": "A ruler who holds absolute power, typically exercised in a cruel or oppressive way"
+    },
+    {
+      "w": "dilatory",
+      "d": "Slow to act; intended to cause delay"
+    },
+    {
+      "w": "disparage",
+      "d": "Regard or represent as being of little worth"
+    },
+    {
+      "w": "dogmatic",
+      "d": "Inclined to lay down principles as incontrovertibly true"
+    },
+    {
+      "w": "duplicity",
+      "d": "Deceitfulness in speech or conduct; double-dealing"
+    },
+    {
+      "w": "ebullient",
+      "d": "Cheerful and full of energy; exuberant"
+    },
+    {
+      "w": "eclectic",
+      "d": "Deriving ideas, style, or taste from a broad and diverse range of sources"
+    },
+    {
+      "w": "egregious",
+      "d": "Outstandingly bad; shocking or offensive"
+    },
+    {
+      "w": "ephemeral",
+      "d": "Lasting for a very short time; transient"
+    },
+    {
+      "w": "exculpate",
+      "d": "Show or declare that someone is not guilty of wrongdoing"
+    },
+    {
+      "w": "fatuous",
+      "d": "Silly, foolish, and pointless"
+    },
+    {
+      "w": "furtive",
+      "d": "Attempting to avoid notice or attention, typically because of guilt"
+    },
+    {
+      "w": "impunity",
+      "d": "Exemption from punishment or freedom from injurious consequences"
+    },
+    {
+      "w": "inchoate",
+      "d": "Just begun and so not fully formed or developed; rudimentary"
+    },
+    {
+      "w": "indolent",
+      "d": "Wanting to avoid exertion; lazy"
+    },
+    {
+      "w": "ineffable",
+      "d": "Too great or extreme to be expressed or described in words"
+    },
+    {
+      "w": "intransigent",
+      "d": "Unwilling or refusing to change one views or to agree about something"
+    },
+    {
+      "w": "inundate",
+      "d": "Overwhelm someone with things or people to be dealt with; flood"
+    },
+    {
+      "w": "juggernaut",
+      "d": "A huge, powerful, and overwhelming force or institution"
+    },
+    {
+      "w": "lugubrious",
+      "d": "Looking or sounding sad and dismal"
+    },
+    {
+      "w": "martinet",
+      "d": "A strict disciplinarian, especially in the armed forces"
+    },
+    {
+      "w": "mendacious",
+      "d": "Not telling the truth; lying"
+    },
+    {
+      "w": "mercurial",
+      "d": "Subject to sudden or unpredictable changes of mood or mind"
+    },
+    {
+      "w": "mitigate",
+      "d": "Make less severe, serious, or painful"
+    },
+    {
+      "w": "munificent",
+      "d": "Larger or more generous than is usual or necessary"
+    },
+    {
+      "w": "obsequious",
+      "d": "Obedient or attentive to an excessive or servile degree"
+    },
+    {
+      "w": "onerous",
+      "d": "Involving an amount of effort and difficulty that is oppressively burdensome"
+    },
+    {
+      "w": "paradigmatic",
+      "d": "Serving as a typical example or model of something"
+    },
+    {
+      "w": "pariah",
+      "d": "An outcast or someone who is rejected by a social group"
+    },
+    {
+      "w": "pejorative",
+      "d": "Expressing contempt or disapproval; a derogatory word"
+    },
+    {
+      "w": "pernicious",
+      "d": "Having a harmful effect, especially in a gradual or subtle way"
+    },
+    {
+      "w": "phlegmatic",
+      "d": "Having an unemotional and stolidly calm disposition"
+    },
+    {
+      "w": "probity",
+      "d": "The quality of having strong moral principles; honesty and decency"
+    },
+    {
+      "w": "proclivity",
+      "d": "A tendency to choose or do something regularly; an inclination"
+    },
+    {
+      "w": "prodigious",
+      "d": "Remarkably or impressively great in extent, size, or degree"
+    },
+    {
+      "w": "pundit",
+      "d": "An expert in a particular subject frequently called on to give opinions"
+    },
+    {
+      "w": "rancor",
+      "d": "Bitterness or resentfulness, especially when long-standing"
+    },
+    {
+      "w": "recondite",
+      "d": "Little known or obscure; abstruse"
+    },
+    {
+      "w": "reparations",
+      "d": "The making of amends for a wrong by paying money or otherwise helping those wronged"
+    },
+    {
+      "w": "reproach",
+      "d": "Express to someone disapproval of or disappointment in their actions"
+    },
+    {
+      "w": "sacrosanct",
+      "d": "Regarded as too important or valuable to be interfered with"
+    },
+    {
+      "w": "sanctimonious",
+      "d": "Making a show of being morally superior to other people"
+    },
+    {
+      "w": "solicitous",
+      "d": "Showing interest or concern about someone well-being or comfort"
+    },
+    {
+      "w": "stolid",
+      "d": "Calm, dependable, and showing little emotion or animation"
+    },
+    {
+      "w": "sycophant",
+      "d": "A person who acts obsequiously toward someone important to gain advantage"
+    },
+    {
+      "w": "timorous",
+      "d": "Showing or suffering from nervousness, fear, or a lack of confidence"
+    },
+    {
+      "w": "torpor",
+      "d": "A state of physical or mental inactivity; lethargy"
+    },
+    {
+      "w": "trepidation",
+      "d": "A feeling of fear or agitation about something that may happen"
+    },
+    {
+      "w": "unctuous",
+      "d": "Excessively or ingratiatingly flattering; oily"
+    },
+    {
+      "w": "vacillate",
+      "d": "Alternate or waver between different opinions or actions; be indecisive"
+    },
+    {
+      "w": "veracity",
+      "d": "Conformity to facts; accuracy or truthfulness"
+    },
+    {
+      "w": "vilify",
+      "d": "Speak or write about in an abusively disparaging manner"
+    },
+    {
+      "w": "vitriolic",
+      "d": "Filled with bitter criticism or malice"
+    }
+  ],
+  "11th": [
+    {
+      "w": "obfuscate",
+      "d": "Render obscure, unclear, or unintelligible"
+    },
+    {
+      "w": "mercurial",
+      "d": "Subject to sudden or unpredictable changes of mood"
+    },
+    {
+      "w": "nefarious",
+      "d": "Wicked, villainous, or criminal action or activity"
+    },
+    {
+      "w": "juxtapose",
+      "d": "Place close together for contrasting effect"
+    },
+    {
+      "w": "garrulous",
+      "d": "Excessively talkative, especially on trivial matters"
+    },
+    {
+      "w": "ubiquitous",
+      "d": "Present, appearing, or found everywhere"
+    },
+    {
+      "w": "recalcitrant",
+      "d": "Having an obstinately uncooperative attitude toward authority"
+    },
+    {
+      "w": "scrupulous",
+      "d": "Diligent, thorough, and extremely attentive to details"
+    },
+    {
+      "w": "ephemeral",
+      "d": "Lasting for a very short time; transient"
+    },
+    {
+      "w": "esoteric",
+      "d": "Intended for or likely to be understood by only a few"
+    },
+    {
+      "w": "cacophony",
+      "d": "A harsh, discordant mixture of sounds"
+    },
+    {
+      "w": "capricious",
+      "d": "Given to sudden and unaccountable changes of mood"
+    },
+    {
+      "w": "surreptitious",
+      "d": "Kept secret, especially because it would not be approved of"
+    },
+    {
+      "w": "loquacious",
+      "d": "Tending to talk a great deal; extremely talkative"
+    },
+    {
+      "w": "meticulous",
+      "d": "Showing great attention to detail; very careful and precise"
+    },
+    {
+      "w": "superfluous",
+      "d": "Unnecessary, especially through being more than enough"
+    },
+    {
+      "w": "taciturn",
+      "d": "Reserved or uncommunicative in speech; saying little"
+    },
+    {
+      "w": "zealous",
+      "d": "Having or showing great energy or enthusiasm in pursuit of a cause"
+    },
+    {
+      "w": "austere",
+      "d": "Severe or strict in manner, attitude, or appearance"
+    },
+    {
+      "w": "circuitous",
+      "d": "Longer than the most direct way; roundabout"
+    },
+    {
+      "w": "deleterious",
+      "d": "Causing harm or damage to health or safety"
+    },
+    {
+      "w": "egregious",
+      "d": "Outstandingly bad; shocking or offensive"
+    },
+    {
+      "w": "fastidious",
+      "d": "Very attentive to and concerned about accuracy and detail"
+    },
+    {
+      "w": "harangue",
+      "d": "A lengthy and aggressive speech or lecture"
+    },
+    {
+      "w": "hubris",
+      "d": "Excessive pride or dangerous self-confidence"
+    },
+    {
+      "w": "insidious",
+      "d": "Proceeding in a gradual, subtle way, but with harmful effects"
+    },
+    {
+      "w": "laconic",
+      "d": "Using very few words; concise to the point of seeming rude"
+    },
+    {
+      "w": "lugubrious",
+      "d": "Looking or sounding sad and dismal"
+    },
+    {
+      "w": "magnanimous",
+      "d": "Generous or forgiving, especially toward a rival"
+    },
+    {
+      "w": "munificent",
+      "d": "Larger or more generous than is usual or necessary"
+    },
+    {
+      "w": "obsequious",
+      "d": "Obedient or attentive to an excessive or servile degree"
+    },
+    {
+      "w": "onerous",
+      "d": "Involving an amount of effort and difficulty that is oppressively burdensome"
+    },
+    {
+      "w": "ostentatious",
+      "d": "Characterized by vulgar or pretentious display"
+    },
+    {
+      "w": "paucity",
+      "d": "The presence of something only in small or insufficient quantities"
+    },
+    {
+      "w": "perfunctory",
+      "d": "Carried out with a minimum of effort or reflection"
+    },
+    {
+      "w": "plethora",
+      "d": "A large or excessive amount of something"
+    },
+    {
+      "w": "pragmatic",
+      "d": "Dealing with things sensibly and realistically"
+    },
+    {
+      "w": "precarious",
+      "d": "Not securely held or in a position likely to fall"
+    },
+    {
+      "w": "propensity",
+      "d": "An inclination or natural tendency to behave in a particular way"
+    },
+    {
+      "w": "rancor",
+      "d": "Bitterness or resentfulness, especially when long-standing"
+    },
+    {
+      "w": "salient",
+      "d": "Most noticeable or important; prominent"
+    },
+    {
+      "w": "sanctimonious",
+      "d": "Making a show of being morally superior to other people"
+    },
+    {
+      "w": "sycophant",
+      "d": "A person who acts obsequiously toward someone important to gain advantage"
+    },
+    {
+      "w": "timorous",
+      "d": "Showing or suffering from nervousness, fear, or a lack of confidence"
+    },
+    {
+      "w": "torpor",
+      "d": "A state of physical or mental inactivity; lethargy"
+    },
+    {
+      "w": "transient",
+      "d": "Lasting only for a short time; impermanent"
+    },
+    {
+      "w": "trepidation",
+      "d": "A feeling of fear or agitation about something that may happen"
+    },
+    {
+      "w": "vacillate",
+      "d": "Alternate or waver between different opinions or actions"
+    },
+    {
+      "w": "vehement",
+      "d": "Showing strong feeling; forceful, passionate, or intense"
+    },
+    {
+      "w": "venerable",
+      "d": "Accorded a great deal of respect, especially because of age or wisdom"
+    }
+  ],
+  "12th": [
+    {
+      "w": "abeyance",
+      "d": "A state of temporary suspension or inactivity"
+    },
+    {
+      "w": "abhorrence",
+      "d": "A feeling of extreme disgust or hatred"
+    },
+    {
+      "w": "acquiescence",
+      "d": "The reluctant acceptance of something without protest"
+    },
+    {
+      "w": "antediluvian",
+      "d": "Belonging to the time before the biblical flood; ridiculously old-fashioned"
+    },
+    {
+      "w": "bourgeoisie",
+      "d": "The middle class, typically regarded as having conventional values"
+    },
+    {
+      "w": "calumniate",
+      "d": "Make false and defamatory statements about someone"
+    },
+    {
+      "w": "consanguineous",
+      "d": "Relating to or denoting people descended from the same ancestor"
+    },
+    {
+      "w": "diaphanous",
+      "d": "Light, delicate, and translucent"
+    },
+    {
+      "w": "dirigible",
+      "d": "Capable of being steered; a large powered airship"
+    },
+    {
+      "w": "efficacy",
+      "d": "The ability to produce a desired or intended result"
+    },
+    {
+      "w": "eleemosynary",
+      "d": "Relating to or dependent on charity; charitable"
+    },
+    {
+      "w": "enmity",
+      "d": "The state or feeling of being actively opposed or hostile to someone"
+    },
+    {
+      "w": "fallibility",
+      "d": "The tendency to make mistakes or be wrong"
+    },
+    {
+      "w": "grandiloquent",
+      "d": "Pompous or extravagant in language, style, or manner"
+    },
+    {
+      "w": "hegemony",
+      "d": "Leadership or dominance, especially of one country or social group over others"
+    },
+    {
+      "w": "iconoclast",
+      "d": "A person who attacks established beliefs or institutions"
+    },
+    {
+      "w": "idiosyncratic",
+      "d": "Relating to peculiarities of an individual"
+    },
+    {
+      "w": "immutable",
+      "d": "Unchanging over time or unable to be changed"
+    },
+    {
+      "w": "impecunious",
+      "d": "Having little or no money; penniless"
+    },
+    {
+      "w": "imperious",
+      "d": "Assuming power or authority without justification; arrogant"
+    },
+    {
+      "w": "impervious",
+      "d": "Not allowing fluid to pass through; unable to be affected by"
+    },
+    {
+      "w": "implacable",
+      "d": "Unable to be appeased or pacified; relentless"
+    },
+    {
+      "w": "incorrigible",
+      "d": "Not able to be corrected, improved, or reformed"
+    },
+    {
+      "w": "indefatigable",
+      "d": "Persisting tirelessly; never growing weary"
+    },
+    {
+      "w": "inimical",
+      "d": "Tending to obstruct or harm; hostile"
+    },
+    {
+      "w": "insouciant",
+      "d": "Showing a casual lack of concern; indifferent"
+    },
+    {
+      "w": "intractable",
+      "d": "Hard to control or deal with; difficult to solve"
+    },
+    {
+      "w": "inveterate",
+      "d": "Having a habit so firmly established it is unlikely to change"
+    },
+    {
+      "w": "irascible",
+      "d": "Having or showing a tendency to be easily angered"
+    },
+    {
+      "w": "lassitude",
+      "d": "Physical or mental weariness; lack of energy"
+    },
+    {
+      "w": "loquacity",
+      "d": "The quality of talking a great deal; talkativeness"
+    },
+    {
+      "w": "malfeasance",
+      "d": "Wrongdoing, especially by a public official"
+    },
+    {
+      "w": "mendacity",
+      "d": "The tendency to be dishonest; untruthfulness"
+    },
+    {
+      "w": "meretricious",
+      "d": "Apparently attractive but having in reality no value or integrity"
+    },
+    {
+      "w": "misanthrope",
+      "d": "A person who dislikes humankind and avoids human society"
+    },
+    {
+      "w": "nadir",
+      "d": "The lowest or most unsuccessful point in a situation"
+    },
+    {
+      "w": "nonplussed",
+      "d": "So surprised and confused that one is unsure how to react"
+    },
+    {
+      "w": "obdurate",
+      "d": "Stubbornly refusing to change opinion or course of action"
+    },
+    {
+      "w": "obstreperous",
+      "d": "Noisy and difficult to control"
+    },
+    {
+      "w": "oligarchy",
+      "d": "A small group of people having control of a country or organization"
+    },
+    {
+      "w": "omniscient",
+      "d": "Knowing everything; having total knowledge"
+    },
+    {
+      "w": "opprobrium",
+      "d": "Harsh criticism or censure; public disgrace"
+    },
+    {
+      "w": "ostracize",
+      "d": "Exclude from a society or group"
+    },
+    {
+      "w": "panegyric",
+      "d": "A public speech or text in praise of someone or something"
+    },
+    {
+      "w": "pellucid",
+      "d": "Translucently clear; easily understood"
+    },
+    {
+      "w": "penurious",
+      "d": "Extremely poor; characterized by poverty"
+    },
+    {
+      "w": "perfidious",
+      "d": "Deceitful and untrustworthy; guilty of betrayal"
+    },
+    {
+      "w": "perspicacious",
+      "d": "Having a ready insight; shrewd"
+    },
+    {
+      "w": "polemic",
+      "d": "A strong verbal or written attack on someone or something"
+    },
+    {
+      "w": "pontificate",
+      "d": "Express opinions in a pompous and dogmatic way"
+    },
+    {
+      "w": "portentous",
+      "d": "Done in a pompously solemn manner; ominously significant"
+    },
+    {
+      "w": "pusillanimous",
+      "d": "Showing a lack of courage or determination; timid"
+    },
+    {
+      "w": "querulous",
+      "d": "Complaining in a petulant or whining manner"
+    },
+    {
+      "w": "quixotic",
+      "d": "Exceedingly idealistic; unrealistic and impractical"
+    },
+    {
+      "w": "remonstrate",
+      "d": "Make a forcefully reproachful protest"
+    },
+    {
+      "w": "reprobate",
+      "d": "An unprincipled person; morally depraved"
+    },
+    {
+      "w": "reticent",
+      "d": "Not revealing thoughts or feelings readily"
+    },
+    {
+      "w": "sanctimony",
+      "d": "Making a show of being morally superior to others"
+    },
+    {
+      "w": "solecism",
+      "d": "A grammatical mistake or social blunder"
+    },
+    {
+      "w": "somnolent",
+      "d": "Sleepy; causing sleepiness"
+    },
+    {
+      "w": "sophistry",
+      "d": "The use of clever but false arguments"
+    },
+    {
+      "w": "specious",
+      "d": "Superficially plausible but actually wrong"
+    },
+    {
+      "w": "supercilious",
+      "d": "Behaving as if one is superior to others; condescending"
+    },
+    {
+      "w": "sycophancy",
+      "d": "Excessive flattery toward someone important in order to gain favor"
+    },
+    {
+      "w": "temerity",
+      "d": "Excessive confidence or boldness; audacity"
+    },
+    {
+      "w": "tendentious",
+      "d": "Promoting a particular point of view; biased"
+    },
+    {
+      "w": "truculent",
+      "d": "Eager or quick to argue or fight; aggressively defiant"
+    },
+    {
+      "w": "turpitude",
+      "d": "Wickedness or depravity"
+    },
+    {
+      "w": "vapid",
+      "d": "Offering nothing stimulating or challenging; dull"
+    },
+    {
+      "w": "verisimilitude",
+      "d": "The appearance of being true or real"
+    },
+    {
+      "w": "vituperate",
+      "d": "Blame or insult someone in strong language"
+    },
+    {
+      "w": "voluble",
+      "d": "Speaking incessantly and fluently"
+    },
+    {
+      "w": "wanton",
+      "d": "Deliberate and unprovoked; merciless"
+    },
+    {
+      "w": "zenith",
+      "d": "The time at which something is most powerful or successful"
+    }
+  ],
+  "finals": [
+    {
+      "w": "spoonerism",
+      "d": "Swapping first sounds of two words"
+    },
+    {
+      "w": "obfuscate",
+      "d": "To make confusing or unclear"
+    },
+    {
+      "w": "catalyst",
+      "d": "Something that speeds up change"
+    },
+    {
+      "w": "ad nauseam",
+      "d": "To a disgusting or excessive degree"
+    },
+    {
+      "w": "dilapidated",
+      "d": "In a state of disrepair"
+    },
+    {
+      "w": "firmament",
+      "d": "The sky or heavens"
+    },
+    {
+      "w": "dementia",
+      "d": "A decline in memory and thinking"
+    },
+    {
+      "w": "wherewithal",
+      "d": "The money or means to do something"
+    },
+    {
+      "w": "counterfeit",
+      "d": "A fake made to deceive"
+    },
+    {
+      "w": "kraken",
+      "d": "A giant sea monster of legend"
+    },
+    {
+      "w": "aardvark",
+      "d": "A nocturnal African mammal"
+    },
+    {
+      "w": "slalom",
+      "d": "A ski race around poles"
+    },
+    {
+      "w": "anathema",
+      "d": "Something greatly hated or cursed"
+    },
+    {
+      "w": "prescient",
+      "d": "Having knowledge of future events"
+    },
+    {
+      "w": "panacea",
+      "d": "A cure for all diseases"
+    },
+    {
+      "w": "pantomime",
+      "d": "Acting without words"
+    },
+    {
+      "w": "quotidian",
+      "d": "Occurring every day, ordinary"
+    },
+    {
+      "w": "exoneration",
+      "d": "Being officially cleared of blame"
+    },
+    {
+      "w": "technocrat",
+      "d": "An expert who holds power"
+    },
+    {
+      "w": "ignominious",
+      "d": "Causing public disgrace"
+    },
+    {
+      "w": "dinero",
+      "d": "Money (Spanish slang)"
+    },
+    {
+      "w": "grandeur",
+      "d": "Impressive beauty or scale"
+    },
+    {
+      "w": "ukulele",
+      "d": "A small four-stringed Hawaiian guitar"
+    },
+    {
+      "w": "billabong",
+      "d": "A stagnant pool in Australia"
+    },
+    {
+      "w": "chintzy",
+      "d": "Cheap and of poor quality"
+    },
+    {
+      "w": "marsupial",
+      "d": "A mammal with a pouch for young"
+    },
+    {
+      "w": "hydroponic",
+      "d": "Growing plants without soil"
+    },
+    {
+      "w": "laudable",
+      "d": "Deserving praise"
+    },
+    {
+      "w": "vacuousness",
+      "d": "Lack of thought or intelligence"
+    },
+    {
+      "w": "surfeit",
+      "d": "An excessive amount"
+    },
+    {
+      "w": "savvy",
+      "d": "Practical knowledge and skill"
+    },
+    {
+      "w": "eschew",
+      "d": "To deliberately avoid"
+    },
+    {
+      "w": "ingratiate",
+      "d": "To make yourself popular with others"
+    },
+    {
+      "w": "cordillera",
+      "d": "A chain of mountains"
+    },
+    {
+      "w": "abysmal",
+      "d": "Extremely bad"
+    },
+    {
+      "w": "sabbatical",
+      "d": "A period of paid leave for study"
+    },
+    {
+      "w": "ancillary",
+      "d": "Providing support to the main work"
+    },
+    {
+      "w": "harbinger",
+      "d": "A sign of things to come"
+    },
+    {
+      "w": "hyacinth",
+      "d": "A fragrant spring flower"
+    },
+    {
+      "w": "hirsute",
+      "d": "Hairy"
+    },
+    {
+      "w": "noxious",
+      "d": "Harmful or poisonous"
+    },
+    {
+      "w": "epicurean",
+      "d": "Devoted to refined pleasures"
+    },
+    {
+      "w": "adumbrate",
+      "d": "To outline or sketch vaguely"
+    },
+    {
+      "w": "neophyte",
+      "d": "A beginner or newcomer"
+    },
+    {
+      "w": "noctambulist",
+      "d": "A sleepwalker"
+    },
+    {
+      "w": "tawdry",
+      "d": "Showy but cheap and tacky"
+    },
+    {
+      "w": "farrago",
+      "d": "A confused mixture"
+    },
+    {
+      "w": "tautology",
+      "d": "Saying the same thing twice"
+    },
+    {
+      "w": "loquacious",
+      "d": "Tending to talk a lot"
+    }
+  ]
+}
