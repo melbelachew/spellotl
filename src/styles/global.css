@@ -60,6 +60,16 @@ h1, h2, h3 { font-family: var(--font-head); }
   transition: all 0.15s;
 }
 .btn:active { transform: scale(0.97); }
+.btn:disabled,
+.btn[disabled] {
+  opacity: 0.45;
+  cursor: not-allowed;
+  filter: grayscale(0.4);
+}
+.btn:disabled:active,
+.btn[disabled]:active { transform: none; }
+.btn:disabled:hover,
+.btn[disabled]:hover { background: inherit; }
 .btn-primary { background: var(--accent2); color: #fff; }
 .btn-primary:hover { background: #6a4bb0; }
 .btn-success { background: var(--accent3); color: #fff; }
