@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/spellstar/static/css/main.ad262710.css",
-    "main.js": "/spellstar/static/js/main.41c9a23b.js",
-    "index.html": "/spellstar/index.html",
-    "main.ad262710.css.map": "/spellstar/static/css/main.ad262710.css.map",
-    "main.41c9a23b.js.map": "/spellstar/static/js/main.41c9a23b.js.map"
+    "main.css": "/spellotl/static/css/main.ad262710.css",
+    "main.js": "/spellotl/static/js/main.979b372c.js",
+    "index.html": "/spellotl/index.html",
+    "main.ad262710.css.map": "/spellotl/static/css/main.ad262710.css.map",
+    "main.979b372c.js.map": "/spellotl/static/js/main.979b372c.js.map"
   },
   "entrypoints": [
     "static/css/main.ad262710.css",
-    "static/js/main.41c9a23b.js"
+    "static/js/main.979b372c.js"
   ]
 }
