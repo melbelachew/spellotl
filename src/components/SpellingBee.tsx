@@ -76,6 +76,7 @@ export const SpellingBee: React.FC<Props> = ({ words, onBack, streak, onCorrect,
       inputRef.current?.focus();
       return;
     }
+    stopSpeaking();
     const correct = qWords[index].w.toLowerCase();
     const isCorrect = val === correct || correct.split('/').map(s => s.trim()).includes(val);
     setInputState(isCorrect ? 'correct' : 'wrong');
@@ -90,6 +91,7 @@ export const SpellingBee: React.FC<Props> = ({ words, onBack, streak, onCorrect,
   }, [checked, input, index, qWords, onCorrect]);
 
   const next = () => {
+    stopSpeaking();
     if (index + 1 >= totalQ) {
       setScreen('results');
     } else {

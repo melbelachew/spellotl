@@ -48,52 +48,124 @@ function waitForVoices(): Promise<void> {
   });
 }
 
+// Estimate how long an utterance should take, so we can set a sane hard
+// timeout if onend never fires. Real speech is ~12 chars/sec at rate=1.0;
+// scale inversely with rate, then pad generously.
+function estimateDurationMs(text: string, rate: number): number {
+  const charsPerSecAt1x = 12;
+  const seconds = text.length / (charsPerSecAt1x * rate);
+  return Math.max(2000, seconds * 1000 + 1500);
+}
+
+/**
+ * Reset the speech synth queue. Calling cancel() alone can leave Chrome
+ * in a state where the *next* utterance silently fails. The trick is to
+ * cancel, then immediately resume — flushes the pipeline cleanly.
+ */
+function resetSpeechQueue(): void {
+  if (!window.speechSynthesis) return;
+  try {
+    window.speechSynthesis.cancel();
+    window.speechSynthesis.resume();
+  } catch {}
+}
+
+// Tracks the in-flight speech promise so external stopSpeaking() calls
+// can resolve it immediately. cancel() doesn't reliably fire onend or
+// onerror, so without this the caller's `finally` block would hang
+// until the safety-net timeout.
+let activeFinish: (() => void) | null = null;
+
 async function sayUtterance(text: string, rate = 0.70): Promise<void> {
   await waitForVoices();
   return new Promise<void>(resolve => {
+    let done = false;
+    const finish = () => {
+      if (done) return;
+      done = true;
+      clearTimeout(timer);
+      if (activeFinish === finish) activeFinish = null;
+      resolve();
+    };
+    activeFinish = finish;
+
     const u = new SpeechSynthesisUtterance(text);
     u.rate = rate;
     u.pitch = 1.0;
     const voice = getBestVoice();
     if (voice) u.voice = voice;
-    u.onend = () => resolve();
-    u.onerror = () => resolve();
+    u.onend = finish;
+    u.onerror = finish;
+
+    // Hard timeout — if the browser drops onend on the floor, we still
+    // resolve so the UI doesn't get stuck on "Playing…" forever.
+    const timer = setTimeout(() => {
+      resetSpeechQueue();
+      finish();
+    }, estimateDurationMs(text, rate));
+
     window.speechSynthesis.speak(u);
   });
 }
 
 export async function speak(word: string): Promise<void> {
   if (!window.speechSynthesis) return;
-  window.speechSynthesis.cancel();
+  resetSpeechQueue();
   await sayUtterance(word, 0.85);
 }
 
 export function stopSpeaking(): void {
-  if (!window.speechSynthesis) return;
-  window.speechSynthesis.cancel();
+  resetSpeechQueue();
+  // Immediately resolve any pending speech promise so callers don't hang.
+  const f = activeFinish;
+  activeFinish = null;
+  if (f) f();
 }
 
 export async function speakAndSpell(word: string): Promise<void> {
   if (!window.speechSynthesis) return;
-  window.speechSynthesis.cancel();
+  resetSpeechQueue();
   await waitForVoices();
   const voice = getBestVoice();
+  const rate = 0.70;
 
   const makeUtterance = (text: string) => {
     const u = new SpeechSynthesisUtterance(text);
-    u.rate = 0.70;
+    u.rate = rate;
     u.pitch = 1.0;
     if (voice) u.voice = voice;
     return u;
   };
 
+  const spelledText = word.split('').join('. ') + '.';
   const wordU = makeUtterance(word);
-  const spellU = makeUtterance(word.split('').join('. ') + '.');
+  const spellU = makeUtterance(spelledText);
   const repeatU = makeUtterance(word);
 
+  // Sum of estimated durations, plus padding for inter-utterance gaps.
+  const totalMs =
+    estimateDurationMs(word, rate) +
+    estimateDurationMs(spelledText, rate) +
+    estimateDurationMs(word, rate);
+
   return new Promise<void>(resolve => {
-    repeatU.onend = () => resolve();
-    repeatU.onerror = () => resolve();
+    let done = false;
+    const finish = () => {
+      if (done) return;
+      done = true;
+      clearTimeout(timer);
+      if (activeFinish === finish) activeFinish = null;
+      resolve();
+    };
+    activeFinish = finish;
+    repeatU.onend = finish;
+    repeatU.onerror = finish;
+
+    const timer = setTimeout(() => {
+      resetSpeechQueue();
+      finish();
+    }, totalMs);
+
     window.speechSynthesis.speak(wordU);
     window.speechSynthesis.speak(spellU);
     window.speechSynthesis.speak(repeatU);

@@ -260,14 +260,15 @@ h1, h2, h3 { font-family: var(--font-head); }
   border-color: var(--accent2);
   opacity: 1;
 }
-.tts-btn.tts-playing:disabled { opacity: 1; cursor: progress; }
+.tts-btn.tts-playing:disabled { opacity: 1; cursor: default; }
 .tts-btn .tts-icon {
   display: inline-block;
-  animation: tts-pulse 0.9s ease-in-out infinite;
+  animation: tts-wave 0.6s ease-in-out infinite alternate;
+  transform-origin: center;
 }
-@keyframes tts-pulse {
-  0%, 100% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.25); opacity: 0.7; }
+@keyframes tts-wave {
+  0%   { transform: scale(1); }
+  100% { transform: scale(1.18); }
 }
 .hint-text { font-size: 13px; color: var(--muted); margin-bottom: 10px; font-style: italic; }
 .spell-input-wrap { display: flex; gap: 8px; margin-top: 1rem; }
