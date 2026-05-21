@@ -8,6 +8,21 @@ export function pick(words: Word[], n: number): Word[] {
   return shuffle(words).slice(0, n);
 }
 
+/**
+ * Pick n words from the list, preferring words not in `avoid`. Falls back to
+ * the full list if there aren't enough fresh words (so games never under-fill).
+ * Comparison is case-insensitive on the `w` field.
+ */
+export function pickAvoiding(words: Word[], n: number, avoid: string[]): Word[] {
+  if (n >= words.length) return shuffle(words).slice(0, n);
+  const avoidSet = new Set(avoid.map(w => w.toLowerCase()));
+  const fresh = words.filter(x => !avoidSet.has(x.w.toLowerCase()));
+  if (fresh.length >= n) return shuffle(fresh).slice(0, n);
+  // Not enough fresh words — take all fresh, then top up from the avoid list.
+  const stale = words.filter(x => avoidSet.has(x.w.toLowerCase()));
+  return [...shuffle(fresh), ...shuffle(stale)].slice(0, n);
+}
+
 function getBestVoice(): SpeechSynthesisVoice | null {
   const voices = window.speechSynthesis.getVoices().filter(v => v.lang.startsWith('en'));
   if (!voices.length) return null;
@@ -35,12 +50,16 @@ function waitForVoices(): Promise<void> {
 
 async function sayUtterance(text: string, rate = 0.70): Promise<void> {
   await waitForVoices();
-  const u = new SpeechSynthesisUtterance(text);
-  u.rate = rate;
-  u.pitch = 1.0;
-  const voice = getBestVoice();
-  if (voice) u.voice = voice;
-  window.speechSynthesis.speak(u);
+  return new Promise<void>(resolve => {
+    const u = new SpeechSynthesisUtterance(text);
+    u.rate = rate;
+    u.pitch = 1.0;
+    const voice = getBestVoice();
+    if (voice) u.voice = voice;
+    u.onend = () => resolve();
+    u.onerror = () => resolve();
+    window.speechSynthesis.speak(u);
+  });
 }
 
 export async function speak(word: string): Promise<void> {
@@ -49,30 +68,36 @@ export async function speak(word: string): Promise<void> {
   await sayUtterance(word, 0.85);
 }
 
+export function stopSpeaking(): void {
+  if (!window.speechSynthesis) return;
+  window.speechSynthesis.cancel();
+}
+
 export async function speakAndSpell(word: string): Promise<void> {
   if (!window.speechSynthesis) return;
   window.speechSynthesis.cancel();
   await waitForVoices();
-  // Say the word
-  const wordU = new SpeechSynthesisUtterance(word);
-  wordU.rate = 0.70;
-  wordU.pitch = 1.0;
   const voice = getBestVoice();
-  if (voice) wordU.voice = voice;
-  // Spell it out after a pause
-  const spelled = word.split('').join('. ') + '.';
-  const spellU = new SpeechSynthesisUtterance(spelled);
-  spellU.rate = 0.70;
-  spellU.pitch = 1.0;
-  if (voice) spellU.voice = voice;
-  // Say it again after spelling
-  const repeatU = new SpeechSynthesisUtterance(word);
-  repeatU.rate = 0.70;
-  repeatU.pitch = 1.0;
-  if (voice) repeatU.voice = voice;
-  window.speechSynthesis.speak(wordU);
-  window.speechSynthesis.speak(spellU);
-  window.speechSynthesis.speak(repeatU);
+
+  const makeUtterance = (text: string) => {
+    const u = new SpeechSynthesisUtterance(text);
+    u.rate = 0.70;
+    u.pitch = 1.0;
+    if (voice) u.voice = voice;
+    return u;
+  };
+
+  const wordU = makeUtterance(word);
+  const spellU = makeUtterance(word.split('').join('. ') + '.');
+  const repeatU = makeUtterance(word);
+
+  return new Promise<void>(resolve => {
+    repeatU.onend = () => resolve();
+    repeatU.onerror = () => resolve();
+    window.speechSynthesis.speak(wordU);
+    window.speechSynthesis.speak(spellU);
+    window.speechSynthesis.speak(repeatU);
+  });
 }
 
 export function getMedal(pct: number): { medal: string; msg: string } {

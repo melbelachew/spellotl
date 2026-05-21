@@ -4,6 +4,7 @@ import { GradeBackground } from './components/backgrounds';
 import { GradeKey, GameMode, Word } from './types';
 import { useWords } from './hooks/useWords';
 import { useStreak } from './hooks/useStreak';
+import { useRecentWords } from './hooks/useRecentWords';
 import { GradeTabs } from './components/GradeTabs';
 import { CustomPanel } from './components/CustomPanel';
 import { MainMenu } from './components/MainMenu';
@@ -18,6 +19,7 @@ type Screen = 'menu' | GameMode;
 export default function App() {
   const { grade, setGrade, getWords, customWords, updateCustomWords, clearCustom, wordCount } = useWords('custom');
   const { streak, increment, reset } = useStreak();
+  const { recent: recentWords, markUsed: markWordsUsed, clear: clearRecentWords } = useRecentWords();
   const [screen, setScreen] = useState<Screen>('menu');
   const [showCustomPanel, setShowCustomPanel] = useState(true);
   const [editingList, setEditingList] = useState(false);
@@ -25,20 +27,22 @@ export default function App() {
   const handleGradeChange = useCallback((g: GradeKey) => {
     setGrade(g);
     setScreen('menu');
+    clearRecentWords();
     if (g === 'custom') {
       setShowCustomPanel(customWords.length === 0);
     } else {
       setShowCustomPanel(false);
     }
     setEditingList(false);
-  }, [setGrade, customWords.length]);
+  }, [setGrade, customWords.length, clearRecentWords]);
 
   const handleLoadList = useCallback((words: Word[]) => {
     updateCustomWords(words);
     setShowCustomPanel(false);
     setEditingList(false);
+    clearRecentWords();
     setScreen('menu');
-  }, [updateCustomWords]);
+  }, [updateCustomWords, clearRecentWords]);
 
   const handleClearList = useCallback(() => {
     clearCustom();
@@ -107,6 +111,8 @@ export default function App() {
             streak={streak}
             onCorrect={increment}
             onReset={reset}
+            recentWords={recentWords}
+            onWordsUsed={markWordsUsed}
           />
         )}
 
@@ -117,6 +123,8 @@ export default function App() {
             streak={streak}
             onCorrect={increment}
             onReset={reset}
+            recentWords={recentWords}
+            onWordsUsed={markWordsUsed}
           />
         )}
 
@@ -135,6 +143,8 @@ export default function App() {
             streak={streak}
             onCorrect={increment}
             onReset={reset}
+            recentWords={recentWords}
+            onWordsUsed={markWordsUsed}
           />
         )}
       </div>

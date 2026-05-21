@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Word } from '../types';
-import { pick, shuffle } from '../utils';
+import { pickAvoiding, shuffle } from '../utils';
 import { GameHeader } from './GameHeader';
 import { ProgressBar } from './ProgressBar';
 import { Results } from './Results';
@@ -11,28 +11,40 @@ interface Props {
   streak: number;
   onCorrect: () => void;
   onReset: (total: number) => void;
+  recentWords: string[];
+  onWordsUsed: (words: string[]) => void;
 }
 
-export const WhichWord: React.FC<Props> = ({ words, onBack, streak, onCorrect, onReset }) => {
+export const WhichWord: React.FC<Props> = ({ words, onBack, streak, onCorrect, onReset, recentWords, onWordsUsed }) => {
   const totalQ = Math.min(10, words.length);
-  const [qWords] = useState<Word[]>(() => pick(words, Math.min(totalQ + 5, words.length)));
+  const [round, setRound] = useState(0);
+
+  // Build a round: pick words + precompute choices for each question.
+  const buildRound = useCallback((avoid: string[]) => {
+    const picked = pickAvoiding(words, Math.min(totalQ + 5, words.length), avoid);
+    const cs = picked.slice(0, totalQ).map(correct => {
+      const pool = words.filter(x => x.w !== correct.w);
+      const others = shuffle(pool).slice(0, Math.min(3, pool.length));
+      return shuffle([correct, ...others]);
+    });
+    return { picked, choices: cs };
+  }, [words, totalQ]);
+
+  // Both qWords and choices must come from the SAME buildRound call so
+  // each question's choice list contains the correct answer. Build once
+  // here and seed both pieces of state.
+  const [initialRound] = useState(() => buildRound(recentWords));
+  const [qWords, setQWords] = useState<Word[]>(initialRound.picked);
+  const [choices, setChoices] = useState<Word[][]>(initialRound.choices);
   const [index, setIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [chosen, setChosen] = useState<string | null>(null);
   const [screen, setScreen] = useState<'playing' | 'results'>('playing');
 
-  useEffect(() => { onReset(totalQ); }, []); // eslint-disable-line
-
-  const buildChoices = useCallback((idx: number): Word[] => {
-    const correct = qWords[idx];
-    const pool = words.filter(x => x.w !== correct.w);
-    const others = shuffle(pool).slice(0, Math.min(3, pool.length));
-    return shuffle([correct, ...others]);
-  }, [qWords, words]);
-
-  const [choices] = useState<Word[][]>(() =>
-    qWords.slice(0, totalQ).map((_, i) => buildChoices(i))
-  );
+  useEffect(() => {
+    onReset(totalQ);
+    onWordsUsed(qWords.slice(0, totalQ).map(w => w.w));
+  }, [round]); // eslint-disable-line
 
   const check = (w: string) => {
     if (chosen) return;
@@ -49,8 +61,19 @@ export const WhichWord: React.FC<Props> = ({ words, onBack, streak, onCorrect, o
     setChosen(null);
   };
 
+  const playAgain = useCallback(() => {
+    const fresh = buildRound(recentWords);
+    setQWords(fresh.picked);
+    setChoices(fresh.choices);
+    setIndex(0);
+    setScore(0);
+    setChosen(null);
+    setScreen('playing');
+    setRound(r => r + 1);
+  }, [buildRound, recentWords]);
+
   if (screen === 'results') {
-    return <Results score={score} total={totalQ} streak={streak} mode="quiz" onPlayAgain={() => window.location.reload()} onMenu={onBack} />;
+    return <Results score={score} total={totalQ} streak={streak} mode="quiz" onPlayAgain={playAgain} onMenu={onBack} />;
   }
 
   const item = qWords[index];

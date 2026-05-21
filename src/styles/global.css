@@ -254,6 +254,21 @@ h1, h2, h3 { font-family: var(--font-head); }
   color: var(--accent2);
 }
 .tts-btn:hover { background: #f5f0ff; }
+.tts-btn:disabled { cursor: not-allowed; opacity: 0.55; }
+.tts-btn.tts-playing {
+  background: #ede5ff;
+  border-color: var(--accent2);
+  opacity: 1;
+}
+.tts-btn.tts-playing:disabled { opacity: 1; cursor: progress; }
+.tts-btn .tts-icon {
+  display: inline-block;
+  animation: tts-pulse 0.9s ease-in-out infinite;
+}
+@keyframes tts-pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.25); opacity: 0.7; }
+}
 .hint-text { font-size: 13px; color: var(--muted); margin-bottom: 10px; font-style: italic; }
 .spell-input-wrap { display: flex; gap: 8px; margin-top: 1rem; }
 .spell-input {

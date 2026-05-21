@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Word } from '../types';
-import { pick, speak, speakAndSpell } from '../utils';
+import { pickAvoiding, speak, speakAndSpell, stopSpeaking } from '../utils';
 import { GameHeader } from './GameHeader';
 import { ProgressBar } from './ProgressBar';
 import { Results } from './Results';
@@ -11,13 +11,16 @@ interface Props {
   streak: number;
   onCorrect: () => void;
   onReset: (total: number) => void;
+  recentWords: string[];
+  onWordsUsed: (words: string[]) => void;
 }
 
 type BeeState = 'playing' | 'results';
 
-export const SpellingBee: React.FC<Props> = ({ words, onBack, streak, onCorrect, onReset }) => {
+export const SpellingBee: React.FC<Props> = ({ words, onBack, streak, onCorrect, onReset, recentWords, onWordsUsed }) => {
   const totalQ = Math.min(10, words.length);
-  const [qWords] = useState<Word[]>(() => pick(words, totalQ));
+  const [round, setRound] = useState(0);
+  const [qWords, setQWords] = useState<Word[]>(() => pickAvoiding(words, totalQ, recentWords));
   const [index, setIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [input, setInput] = useState('');
@@ -26,16 +29,39 @@ export const SpellingBee: React.FC<Props> = ({ words, onBack, streak, onCorrect,
   const [showHint, setShowHint] = useState(false);
   const [checked, setChecked] = useState(false);
   const [screen, setScreen] = useState<BeeState>('playing');
+  const [speaking, setSpeaking] = useState<'hear' | 'spell' | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  const isMounted = useRef(true);
+
+  useEffect(() => {
+    isMounted.current = true;
+    return () => {
+      isMounted.current = false;
+      stopSpeaking();
+    };
+  }, []);
+
+  const playAudio = useCallback(async (which: 'hear' | 'spell', word: string) => {
+    if (speaking) return;
+    setSpeaking(which);
+    try {
+      if (which === 'hear') await speak(word);
+      else await speakAndSpell(word);
+    } finally {
+      if (isMounted.current) setSpeaking(null);
+    }
+  }, [speaking]);
 
   useEffect(() => {
     onReset(totalQ);
-  }, []); // eslint-disable-line
+    onWordsUsed(qWords.map(w => w.w));
+  }, [round]); // eslint-disable-line
 
   useEffect(() => {
     if (screen !== 'playing') return;
+    const word = qWords[index]?.w || '';
     const timer = setTimeout(() => {
-      speak(qWords[index]?.w || '');
+      if (word) playAudio('hear', word);
       inputRef.current?.focus();
     }, 300);
     return () => clearTimeout(timer);
@@ -43,8 +69,14 @@ export const SpellingBee: React.FC<Props> = ({ words, onBack, streak, onCorrect,
 
   const checkAnswer = useCallback(() => {
     if (checked) return;
-    const correct = qWords[index].w.toLowerCase();
     const val = input.trim().toLowerCase();
+    if (!val) {
+      setFeedback('✍️ Please type a word first');
+      setInputState('idle');
+      inputRef.current?.focus();
+      return;
+    }
+    const correct = qWords[index].w.toLowerCase();
     const isCorrect = val === correct || correct.split('/').map(s => s.trim()).includes(val);
     setInputState(isCorrect ? 'correct' : 'wrong');
     setChecked(true);
@@ -70,8 +102,21 @@ export const SpellingBee: React.FC<Props> = ({ words, onBack, streak, onCorrect,
     }
   };
 
+  const playAgain = useCallback(() => {
+    setQWords(pickAvoiding(words, totalQ, recentWords));
+    setIndex(0);
+    setScore(0);
+    setInput('');
+    setInputState('idle');
+    setFeedback('');
+    setShowHint(false);
+    setChecked(false);
+    setScreen('playing');
+    setRound(r => r + 1);
+  }, [words, totalQ, recentWords]);
+
   if (screen === 'results') {
-    return <Results score={score} total={totalQ} streak={streak} mode="bee" onPlayAgain={() => window.location.reload()} onMenu={onBack} />;
+    return <Results score={score} total={totalQ} streak={streak} mode="bee" onPlayAgain={playAgain} onMenu={onBack} />;
   }
 
   const item = qWords[index];
@@ -83,8 +128,24 @@ export const SpellingBee: React.FC<Props> = ({ words, onBack, streak, onCorrect,
       <div className="word-display">
         <div style={{ fontSize: '13px', color: 'var(--muted)', marginBottom: '8px' }}>Word {index + 1} of {totalQ}</div>
         <div className="bee-controls">
-          <button className="tts-btn" onClick={() => speak(item.w)} aria-label="Hear the word spoken aloud">🔊 Hear it</button>
-          <button className="tts-btn" onClick={() => speakAndSpell(item.w)} aria-label="Hear the word spoken and spelled out">✏️ Spell it</button>
+          <button
+            className={`tts-btn${speaking === 'hear' ? ' tts-playing' : ''}`}
+            onClick={() => playAudio('hear', item.w)}
+            disabled={speaking !== null}
+            aria-label={speaking === 'hear' ? 'Playing audio' : 'Hear the word spoken aloud'}
+            aria-live="polite"
+          >
+            {speaking === 'hear' ? <><span className="tts-icon">🔊</span> Playing…</> : <>🔊 Hear it</>}
+          </button>
+          <button
+            className={`tts-btn${speaking === 'spell' ? ' tts-playing' : ''}`}
+            onClick={() => playAudio('spell', item.w)}
+            disabled={speaking !== null}
+            aria-label={speaking === 'spell' ? 'Playing audio' : 'Hear the word spoken and spelled out'}
+            aria-live="polite"
+          >
+            {speaking === 'spell' ? <><span className="tts-icon">✏️</span> Playing…</> : <>✏️ Spell it</>}
+          </button>
           {!showHint && (
             <button className="tts-btn" onClick={() => setShowHint(true)} aria-label="Show hint">💡 Hint</button>
           )}

@@ -1,6 +1,6 @@
 import React, { useState, useCallback, useRef } from 'react';
 import { Word, MatchTile } from '../types';
-import { shuffle } from '../utils';
+import { shuffle, pickAvoiding } from '../utils';
 import { GameHeader } from './GameHeader';
 import { ProgressBar } from './ProgressBar';
 import { Results } from './Results';
@@ -11,14 +11,17 @@ interface Props {
   streak: number;
   onCorrect: () => void;
   onReset: (total: number) => void;
+  recentWords: string[];
+  onWordsUsed: (words: string[]) => void;
 }
 
 type TileState = 'idle' | 'selected' | 'matched' | 'wrong';
 
-export const MatchUp: React.FC<Props> = ({ words, onBack, streak, onCorrect, onReset }) => {
+export const MatchUp: React.FC<Props> = ({ words, onBack, streak, onCorrect, onReset, recentWords, onWordsUsed }) => {
   const pairCount = Math.min(6, words.length);
-  const [pool] = useState<Word[]>(() => shuffle(words).slice(0, pairCount));
-  const [tiles] = useState<MatchTile[]>(() => {
+  const [round, setRound] = useState(0);
+  const [pool, setPool] = useState<Word[]>(() => pickAvoiding(words, pairCount, recentWords));
+  const [tiles, setTiles] = useState<MatchTile[]>(() => {
     const t: MatchTile[] = [];
     pool.forEach((w, i) => {
       t.push({ id: `w${i}`, text: w.w, pair: i, type: 'word' });
@@ -37,7 +40,29 @@ export const MatchUp: React.FC<Props> = ({ words, onBack, streak, onCorrect, onR
 
   const total = pairCount;
 
-  React.useEffect(() => { onReset(total); }, []); // eslint-disable-line
+  React.useEffect(() => {
+    onReset(total);
+    onWordsUsed(pool.map(w => w.w));
+  }, [round]); // eslint-disable-line
+
+  const playAgain = useCallback(() => {
+    // Use the freshly-updated recent list (which now includes the round we just played)
+    const newPool = pickAvoiding(words, pairCount, recentWords);
+    const newTiles: MatchTile[] = [];
+    newPool.forEach((w, i) => {
+      newTiles.push({ id: `w${i}`, text: w.w, pair: i, type: 'word' });
+      newTiles.push({ id: `d${i}`, text: w.d, pair: i, type: 'def' });
+    });
+    const shuffled = shuffle(newTiles);
+    setPool(newPool);
+    setTiles(shuffled);
+    setTileStates(Object.fromEntries(shuffled.map(t => [t.id, 'idle' as TileState])));
+    setSelected(null);
+    setScore(0);
+    setMatched(0);
+    animating.current = false;
+    setRound(r => r + 1);
+  }, [words, pairCount, recentWords]);
 
   const setTileState = useCallback((id: string, state: TileState) => {
     setTileStates(prev => ({ ...prev, [id]: state }));
@@ -87,7 +112,7 @@ export const MatchUp: React.FC<Props> = ({ words, onBack, streak, onCorrect, onR
   }, [selected, tileStates, setTileState, onCorrect]);
 
   if (matched === total) {
-    return <Results score={score} total={total} streak={streak} mode="match" onPlayAgain={() => window.location.reload()} onMenu={onBack} />;
+    return <Results score={score} total={total} streak={streak} mode="match" onPlayAgain={playAgain} onMenu={onBack} />;
   }
 
   const getTileStyle = (tile: MatchTile): React.CSSProperties => {

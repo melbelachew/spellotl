@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Word } from '../types';
-import { shuffle, speak } from '../utils';
+import { shuffle, speak, stopSpeaking } from '../utils';
 import { GameHeader } from './GameHeader';
 import { ProgressBar } from './ProgressBar';
 
@@ -18,6 +18,10 @@ export const FlashCards: React.FC<Props> = ({ words, onBack, onReset }) => {
   const [fading, setFading] = useState(false);
 
   useEffect(() => { onReset(deck.length); }, []); // eslint-disable-line
+
+  useEffect(() => {
+    return () => { stopSpeaking(); };
+  }, []);
 
   const total = deck.length;
   const item = deck[index];
