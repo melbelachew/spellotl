@@ -62,14 +62,18 @@ h1, h2, h3 { font-family: var(--font-head); }
 .btn:active { transform: scale(0.97); }
 .btn:disabled,
 .btn[disabled] {
-  opacity: 0.45;
+  opacity: 0.75;
   cursor: not-allowed;
-  filter: grayscale(0.4);
 }
 .btn:disabled:active,
 .btn[disabled]:active { transform: none; }
-.btn:disabled:hover,
-.btn[disabled]:hover { background: inherit; }
+/* Suppress hover background change on disabled buttons (keep the base color). */
+.btn-primary:disabled:hover,
+.btn-primary[disabled]:hover { background: var(--accent2); }
+.btn-success:disabled:hover,
+.btn-success[disabled]:hover { background: var(--accent3); }
+.btn-warn:disabled:hover,
+.btn-warn[disabled]:hover { background: var(--accent); }
 .btn-primary { background: var(--accent2); color: #fff; }
 .btn-primary:hover { background: #6a4bb0; }
 .btn-success { background: var(--accent3); color: #fff; }
