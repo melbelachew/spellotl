@@ -137,15 +137,20 @@ export async function speakAndSpell(word: string): Promise<void> {
     return u;
   };
 
-  const spelledText = word.split('').join('. ') + '.';
+  // Speak each letter as a separate utterance. If we join them into one
+  // string (e.g. "a. l. l. e. v. i. a. t. e."), the engine recognizes
+  // common letter runs as abbreviations — "v.i.a." becomes "via",
+  // "a.m." becomes "ay-em", etc. Isolating each letter eliminates that.
+  const letters = word.toUpperCase().split('').filter(c => /[A-Z]/.test(c));
+
   const wordU = makeUtterance(word);
-  const spellU = makeUtterance(spelledText);
+  const letterUtterances = letters.map(letter => makeUtterance(letter));
   const repeatU = makeUtterance(word);
 
-  // Sum of estimated durations, plus padding for inter-utterance gaps.
+  // Estimate total: full word + ~0.5s per letter + full word again.
   const totalMs =
     estimateDurationMs(word, rate) +
-    estimateDurationMs(spelledText, rate) +
+    letters.length * 600 +
     estimateDurationMs(word, rate);
 
   return new Promise<void>(resolve => {
@@ -167,7 +172,7 @@ export async function speakAndSpell(word: string): Promise<void> {
     }, totalMs);
 
     window.speechSynthesis.speak(wordU);
-    window.speechSynthesis.speak(spellU);
+    letterUtterances.forEach(u => window.speechSynthesis.speak(u));
     window.speechSynthesis.speak(repeatU);
   });
 }
