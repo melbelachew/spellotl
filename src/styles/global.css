@@ -2,6 +2,11 @@
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 :root {
   --bg: #fff9f0;
   --card: #fff;
@@ -30,6 +35,8 @@ h1, h2, h3 { font-family: var(--font-head); }
   max-width: 900px;
   margin: 0 auto;
   padding: 1rem;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 /* Skip link */
@@ -211,6 +218,8 @@ h1, h2, h3 { font-family: var(--font-head); }
   padding: 5px 14px;
   font-size: 14px;
   font-weight: 700;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 /* Progress bar */
@@ -236,6 +245,8 @@ h1, h2, h3 { font-family: var(--font-head); }
   font-weight: 700;
   font-size: 1rem;
   margin-top: 10px;
+  word-break: normal;
+  overflow-wrap: anywhere;
 }
 .feedback.correct { background: #e8f7f0; color: var(--accent3); }
 .feedback.wrong { background: #fde8ed; color: var(--accent4); }
@@ -356,7 +367,9 @@ h1, h2, h3 { font-family: var(--font-head); }
   font-family: var(--font-body);
   transition: all 0.15s;
   color: var(--text);
-  word-break: break-word;
+  word-break: normal;
+  overflow-wrap: anywhere;
+  hyphens: auto;
   line-height: 1.3;
 }
 .match-tile:focus-visible { outline: 3px solid var(--accent2); outline-offset: 2px; }
@@ -366,15 +379,31 @@ h1, h2, h3 { font-family: var(--font-head); }
 .match-instruction { font-size: 12px; color: var(--muted); margin-bottom: 10px; }
 
 /* Results */
-.results { text-align: center; padding: 2rem 1rem; }
-.results-medal { font-size: 4rem; margin-bottom: 0.5rem; }
-.results-score { font-family: var(--font-head); font-size: 3.5rem; color: var(--accent2); }
-.results-msg { font-size: 1.1rem; color: var(--muted); margin: 8px 0 1.5rem; }
-.stat-row { display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1.5rem; }
-.stat { text-align: center; }
-.stat-n { font-family: var(--font-head); font-size: 1.8rem; }
+.results { text-align: center; padding: clamp(1.25rem, 5vw, 2rem) clamp(0.75rem, 4vw, 1.5rem); }
+.results-medal { font-size: clamp(2.75rem, 12vw, 4rem); margin-bottom: 0.5rem; }
+.results-score {
+  font-family: var(--font-head);
+  font-size: clamp(2.25rem, 11vw, 3.5rem);
+  color: var(--accent2);
+  white-space: nowrap;
+  line-height: 1.1;
+}
+.results-msg {
+  font-size: clamp(0.95rem, 3.5vw, 1.1rem);
+  color: var(--muted);
+  margin: 8px auto 1.5rem;
+  max-width: 32ch;
+  line-height: 1.4;
+}
+.stat-row { display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+.stat { text-align: center; min-width: 0; }
+.stat-n { font-family: var(--font-head); font-size: clamp(1.4rem, 6vw, 1.8rem); }
 .stat-l { font-size: 14px; color: var(--muted); }
 .results-actions { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+.results-actions .btn {
+  white-space: nowrap;
+  min-width: 0;
+}
 
 /* Top bar */
 .top-bar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; padding: 0.5rem 0; }
@@ -391,12 +420,6 @@ h1, h2, h3 { font-family: var(--font-head); }
 
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; }
-}
-
-@media (max-width: 480px) {
-  .menu-grid { grid-template-columns: 1fr 1fr; }
-  .match-grid { grid-template-columns: repeat(3, 1fr); }
-  .choices { grid-template-columns: 1fr 1fr; }
 }
 
 /* PWA install prompt */
@@ -452,3 +475,173 @@ h1, h2, h3 { font-family: var(--font-head); }
 @media (max-width: 380px) {
   .install-prompt__icon { display: none; }
 }
+
+/* ======================================================================
+   RESPONSIVE FIXES
+   ====================================================================== */
+
+/* --- Grade tabs: horizontal scroll on mobile (issue #6) --- */
+@media (max-width: 600px) {
+  .grade-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 4px;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity;
+    scrollbar-width: thin;
+  }
+  .grade-tabs::-webkit-scrollbar { height: 4px; }
+  .grade-tabs::-webkit-scrollbar-thumb { background: rgba(124,92,191,.3); border-radius: 999px; }
+  .grade-tab {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+  }
+}
+
+/* --- Game header reflow (issue #2) ---
+   At narrow widths, stack: [back, title] on top, badge centered below.
+   This prevents the score badge from being clipped against the right edge.
+   The Results screen reuses .game-header with an empty trailing span as
+   placeholder, so the selectors target the title specifically by being
+   the first span child. */
+@media (max-width: 600px) {
+  .game-header {
+    flex-wrap: wrap;
+    row-gap: 8px;
+    column-gap: 8px;
+  }
+  .game-header .back-btn {
+    order: 1;
+    flex-shrink: 0;
+  }
+  .game-header > span:first-of-type {
+    order: 2;
+    flex: 1 1 auto;
+    min-width: 0;
+    text-align: center;
+    font-size: 1rem !important;
+  }
+  .game-header .score-badge {
+    order: 3;
+    flex: 1 1 100%;
+    text-align: center;
+    font-size: 13px;
+    padding: 5px 10px;
+  }
+  /* Hide empty placeholder spans (Results screen) so they don't take a slot. */
+  .game-header > span:empty {
+    display: none;
+  }
+}
+
+/* --- Logo: prevent left-clip (issue #5) --- */
+.top-bar {
+  flex-wrap: wrap;
+  gap: 8px;
+  min-width: 0;
+}
+.logo {
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+@media (max-width: 480px) {
+  .logo { font-size: 1.4rem; }
+  .app { padding: 0.75rem; }
+  .game-area { padding: 1rem; border-radius: 16px; }
+}
+
+/* --- Menu grid: single column below ~480px (issue #8) --- */
+@media (max-width: 480px) {
+  .menu-grid { grid-template-columns: 1fr; }
+  .mode-card p { font-size: 13px; }
+}
+
+/* --- Match Up grid: 2-col then 1-col (issue #3) --- */
+@media (max-width: 640px) {
+  .match-grid { grid-template-columns: repeat(2, 1fr); }
+  .match-tile {
+    min-height: 60px;
+    font-size: 14px;
+    padding: 10px 8px;
+  }
+  .match-tile.def-tile { font-size: 12px; }
+}
+@media (max-width: 360px) {
+  .match-grid { grid-template-columns: 1fr; }
+}
+
+/* --- Flash Cards: stack action buttons (issue #4) --- */
+.flash-controls > * {
+  min-width: 0;
+  width: 100%;
+}
+@media (max-width: 480px) {
+  .flash-controls {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .flash-controls .btn { width: 100%; }
+}
+
+/* --- Spell input wrap: stack on very narrow (issue #4 cousin) --- */
+@media (max-width: 380px) {
+  .spell-input-wrap { flex-direction: column; }
+  .spell-input-wrap .btn { width: 100%; }
+}
+
+/* --- Bee controls: wrap, ensure tap targets (issue #9) --- */
+@media (max-width: 480px) {
+  .bee-controls { flex-wrap: wrap; }
+  .tts-btn {
+    min-height: 40px;
+    padding: 8px 14px;
+  }
+}
+
+/* --- Results actions: full-width buttons on narrow --- */
+@media (max-width: 380px) {
+  .results-actions { flex-direction: column; }
+  .results-actions .btn { width: 100%; }
+}
+
+/* --- Tap targets on touch devices (issue #9) ---
+   Use pointer:coarse rather than width-based queries — a tablet at 1024px
+   is still a touch device and needs larger hit targets, while a 600px-wide
+   browser window on desktop doesn't. */
+@media (pointer: coarse) {
+  .grade-tab,
+  .back-btn {
+    min-height: 40px;
+    padding: 8px 14px;
+  }
+}
+
+/* --- Footer readability (issue #11) --- */
+footer, .footer, .app > footer {
+  line-height: 1.6;
+}
+@media (max-width: 480px) {
+  footer, .footer, .app > footer {
+    font-size: 12px;
+    padding: 1rem 0.5rem;
+  }
+}
+
+/* --- Choices grid: ensure single column at very small (issue #3 cousin) --- */
+@media (max-width: 360px) {
+  .choices { grid-template-columns: 1fr; }
+}
+
+/* --- Override the older blanket .menu-grid rule at 480px ---
+   The original rule kept menu-grid 2-col below 480; we now override
+   that with the single-column rule above. Match-grid override below
+   replaces the old "still 3-col" rule. */

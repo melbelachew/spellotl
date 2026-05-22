@@ -56,9 +56,15 @@ export const WhichWord: React.FC<Props> = ({ words, onBack, streak, onCorrect, o
   };
 
   const next = () => {
-    if (index + 1 >= totalQ) { setScreen('results'); return; }
-    setIndex(i => i + 1);
-    setChosen(null);
+    setIndex(i => {
+      const nextIdx = i + 1;
+      if (nextIdx >= totalQ) {
+        setScreen('results');
+        return i;
+      }
+      setChosen(null);
+      return nextIdx;
+    });
   };
 
   const playAgain = useCallback(() => {
@@ -78,6 +84,9 @@ export const WhichWord: React.FC<Props> = ({ words, onBack, streak, onCorrect, o
 
   const item = qWords[index];
   const currentChoices = choices[index];
+  if (!item || !currentChoices) {
+    return <Results score={score} total={totalQ} streak={streak} mode="quiz" onPlayAgain={playAgain} onMenu={onBack} />;
+  }
   const isCorrect = chosen === item.w;
 
   return (
@@ -85,7 +94,7 @@ export const WhichWord: React.FC<Props> = ({ words, onBack, streak, onCorrect, o
       <GameHeader title="Which Word?" icon="🎯" score={score} total={totalQ} onBack={onBack} />
       <ProgressBar current={index} total={totalQ} />
       <div style={{ textAlign: 'center', padding: '1rem 0 0.5rem' }}>
-        <div style={{ fontSize: '13px', color: 'var(--muted)', marginBottom: '6px' }}>Word {index + 1} of {totalQ}</div>
+        <div style={{ fontSize: '13px', color: 'var(--muted)', marginBottom: '6px' }}>Word {Math.min(index + 1, totalQ)} of {totalQ}</div>
         <div className="quiz-prompt">{item.d}</div>
         <div className="quiz-instruction">Which word matches this definition?</div>
       </div>

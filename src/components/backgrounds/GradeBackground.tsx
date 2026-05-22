@@ -520,6 +520,7 @@ export const GradeBackground: React.FC<GradeBackgroundProps> = ({ grade }) => {
             key={g}
             style={{
               position: 'fixed', inset: 0,
+              overflow: 'hidden',
               opacity,
               transition: 'opacity 0.7s ease',
               pointerEvents: 'none',

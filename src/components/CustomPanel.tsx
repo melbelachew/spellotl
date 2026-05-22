@@ -53,7 +53,7 @@ export const CustomPanel: React.FC<Props> = ({ onLoad, onClear, initialValue = '
   return (
     <div className="custom-panel">
       <h2>📋 Paste your word list</h2>
-      <p>One word per line. Optionally add a definition after a colon: <em>catalyst: something that speeds up change</em></p>
+      <p>Load a list to unlock the games below. One word per line — optionally add a definition after a colon: <em>catalyst: something that speeds up change</em></p>
       <label htmlFor="custom-input" className="sr-only">Word list</label>
       <textarea
         id="custom-input"

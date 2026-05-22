@@ -92,16 +92,19 @@ export const SpellingBee: React.FC<Props> = ({ words, onBack, streak, onCorrect,
 
   const next = () => {
     stopSpeaking();
-    if (index + 1 >= totalQ) {
-      setScreen('results');
-    } else {
-      setIndex(i => i + 1);
+    setIndex(i => {
+      const nextIdx = i + 1;
+      if (nextIdx >= totalQ) {
+        setScreen('results');
+        return i; // don't increment past the end
+      }
       setInput('');
       setInputState('idle');
       setFeedback('');
       setShowHint(false);
       setChecked(false);
-    }
+      return nextIdx;
+    });
   };
 
   const playAgain = useCallback(() => {
@@ -122,13 +125,17 @@ export const SpellingBee: React.FC<Props> = ({ words, onBack, streak, onCorrect,
   }
 
   const item = qWords[index];
+  if (!item) {
+    // Defensive: state somehow drifted past the deck; bail to results.
+    return <Results score={score} total={totalQ} streak={streak} mode="bee" onPlayAgain={playAgain} onMenu={onBack} />;
+  }
 
   return (
     <div className="game-area" aria-live="polite">
       <GameHeader title="Spelling Bee" icon="🐝" score={score} total={totalQ} onBack={onBack} />
       <ProgressBar current={index} total={totalQ} />
       <div className="word-display">
-        <div style={{ fontSize: '13px', color: 'var(--muted)', marginBottom: '8px' }}>Word {index + 1} of {totalQ}</div>
+        <div style={{ fontSize: '13px', color: 'var(--muted)', marginBottom: '8px' }}>Word {Math.min(index + 1, totalQ)} of {totalQ}</div>
         <div className="bee-controls">
           <button
             className={`tts-btn${speaking === 'hear' ? ' tts-playing' : ''}`}
