@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/spellotl/static/css/main.7da9382a.css",
-    "main.js": "/spellotl/static/js/main.bbfb25a2.js",
+    "main.js": "/spellotl/static/js/main.6655cdbb.js",
     "index.html": "/spellotl/index.html",
     "main.7da9382a.css.map": "/spellotl/static/css/main.7da9382a.css.map",
-    "main.bbfb25a2.js.map": "/spellotl/static/js/main.bbfb25a2.js.map"
+    "main.6655cdbb.js.map": "/spellotl/static/js/main.6655cdbb.js.map"
   },
   "entrypoints": [
     "static/css/main.7da9382a.css",
-    "static/js/main.bbfb25a2.js"
+    "static/js/main.6655cdbb.js"
   ]
 }
