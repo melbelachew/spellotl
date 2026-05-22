@@ -2,3 +2,9 @@ node_modules
 .DS_Store
 src/.DS_Store
 build/
+dist
+
+.env
+.env.local
+.env.*.local
+
