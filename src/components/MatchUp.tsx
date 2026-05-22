@@ -134,25 +134,24 @@ export const MatchUp: React.FC<Props> = ({ words, onBack, streak, onCorrect, onR
   };
 
   return (
-    <div className="game-area" aria-live="polite">
+    <div className="game-area">
       <GameHeader title="Match Up" icon="🃏" score={matched} total={total} scoreLabel="Matched" onBack={onBack} />
       <ProgressBar current={matched} total={total} />
       <p className="match-instruction">Match each word to its definition</p>
       <div className="match-grid">
         {tiles.map(tile => (
-          <div
+          <button
             key={tile.id}
+            type="button"
             className={getTileClass(tile)}
             style={getTileStyle(tile)}
             onClick={() => select(tile)}
-            onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') select(tile); }}
-            tabIndex={tileStates[tile.id] === 'matched' ? -1 : 0}
-            role="button"
+            disabled={tileStates[tile.id] === 'matched'}
             aria-label={`${tile.type === 'word' ? 'Word' : 'Definition'}: ${tile.text}`}
             aria-pressed={tileStates[tile.id] === 'selected'}
           >
             {tile.text}
-          </div>
+          </button>
         ))}
       </div>
     </div>

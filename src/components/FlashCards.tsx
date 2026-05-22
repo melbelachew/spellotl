@@ -51,33 +51,35 @@ export const FlashCards: React.FC<Props> = ({ words, onBack, onReset }) => {
     <div className="game-area">
       <GameHeader title="Flash Cards" icon="⚡" score={index + 1} total={total} scoreLabel="Card" onBack={onBack} />
       <ProgressBar current={maxIdx + 1} total={total} />
-      <div
+      <button
+        type="button"
         className="flash-card"
         onClick={flip}
-        onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') flip(); }}
-        role="button"
-        tabIndex={0}
         aria-label={`Flash card — press Enter or Space to flip. ${flipped ? 'Showing definition' : 'Showing word'}`}
       >
         <div className="flash-inner" style={{ opacity: fading ? 0 : 1 }}>
           {flipped ? item.d : item.w}
         </div>
-      </div>
+      </button>
       <div className="flash-hint">
-        {flipped ? '📖 Definition — tap card to see spelling' : '✨ Word — tap card to reveal definition'}
+        {flipped
+          ? <><span aria-hidden="true">📖 </span>Definition — tap card to see spelling</>
+          : <><span aria-hidden="true">✨ </span>Word — tap card to reveal definition</>}
       </div>
       <div className="flash-controls">
-        <button className="btn btn-warn" onClick={() => nav(-1)} disabled={index === 0} aria-label="Previous card">
-          ← Prev
+        <button type="button" className="btn btn-warn" onClick={() => nav(-1)} disabled={index === 0} aria-label="Previous card">
+          <span aria-hidden="true">← </span>Prev
         </button>
-        <button className="btn btn-success" onClick={() => nav(1)} aria-label={index === total - 1 ? 'Finish' : 'Next card'}>
-          {index === total - 1 ? 'Done ✓' : 'Next →'}
+        <button type="button" className="btn btn-success" onClick={() => nav(1)} aria-label={index === total - 1 ? 'Finish' : 'Next card'}>
+          {index === total - 1
+            ? <>Done <span aria-hidden="true">✓</span></>
+            : <>Next <span aria-hidden="true">→</span></>}
         </button>
-        <button className="btn btn-primary" onClick={() => speak(item.w)} aria-label="Hear the word spoken aloud">
-          🔊 Hear
+        <button type="button" className="btn btn-primary" onClick={() => speak(item.w)} aria-label="Hear the word spoken aloud">
+          <span aria-hidden="true">🔊 </span>Hear
         </button>
-        <button className="btn btn-neutral" onClick={reshuffle} aria-label="Shuffle flash cards">
-          🔀 Shuffle
+        <button type="button" className="btn btn-neutral" onClick={reshuffle} aria-label="Shuffle flash cards">
+          <span aria-hidden="true">🔀 </span>Shuffle
         </button>
       </div>
     </div>

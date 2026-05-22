@@ -19,12 +19,11 @@ export const Results: React.FC<Props> = ({ score, total, streak, mode, onPlayAga
     <div className="game-area">
       <div className="game-header">
         <button className="back-btn" onClick={onMenu} aria-label="Back to menu">← Menu</button>
-        <span style={{ fontFamily: 'var(--font-head)', fontSize: '1.1rem' }}>Results</span>
-        <span />
+        <h2 className="game-title">Results</h2>
       </div>
       <div className="results">
-        <div className="results-medal">{medal}</div>
-        <div className="results-score">{score} / {total}</div>
+        <div className="results-medal" aria-hidden="true">{medal}</div>
+        <div className="results-score" aria-label={`Final score: ${score} out of ${total}`}>{score} / {total}</div>
         <div className="results-msg">{msg}</div>
         <div className="stat-row">
           <div className="stat">

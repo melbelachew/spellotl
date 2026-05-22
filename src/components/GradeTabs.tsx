@@ -1,8 +1,8 @@
 import React from 'react';
 import { GradeKey } from '../types';
 
-const GRADES: { key: GradeKey; label: string }[] = [
-  { key: 'custom', label: '✏️ My List' },
+const GRADES: { key: GradeKey; label: string; iconLabel?: string }[] = [
+  { key: 'custom', label: 'My List', iconLabel: '✏️' },
   { key: 'K', label: 'Kindergarten' },
   { key: '1st', label: '1st Grade' },
   { key: '2nd', label: '2nd Grade' },
@@ -26,17 +26,18 @@ interface Props {
 }
 
 export const GradeTabs: React.FC<Props> = ({ current, onChange }) => (
-  <div className="grade-tabs" role="tablist" aria-label="Grade selection">
-    {GRADES.map(({ key, label }) => (
+  <nav className="grade-tabs" aria-label="Grade selection">
+    {GRADES.map(({ key, label, iconLabel }) => (
       <button
         key={key}
         className={`grade-tab${current === key ? ' active' : ''}`}
         onClick={() => onChange(key)}
-        role="tab"
-        aria-selected={current === key}
+        type="button"
+        aria-pressed={current === key}
       >
+        {iconLabel && <span aria-hidden="true">{iconLabel} </span>}
         {label}
       </button>
     ))}
-  </div>
+  </nav>
 );

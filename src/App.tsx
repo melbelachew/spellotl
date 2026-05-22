@@ -77,10 +77,10 @@ export default function App() {
       <a href="#main-content" className="skip-link">Skip to content</a>
       <GradeBackground grade={grade} />
       <div style={{ position: 'relative', zIndex: 1 }}>
-      <div className="app" role="main">
-        <div className="top-bar">
-          <h1 className="logo">Spellotl🦎 </h1>
-        </div>
+      <main className="app" id="main-content" tabIndex={-1}>
+        <header className="top-bar">
+          <h1 className="logo">Spellotl<span aria-hidden="true">🦎</span> </h1>
+        </header>
 
         {screen === 'menu' && (
           <>
@@ -147,7 +147,7 @@ export default function App() {
             onWordsUsed={markWordsUsed}
           />
         )}
-      </div>
+      </main>
       <footer style={{
         position: 'relative',
         zIndex: 1,

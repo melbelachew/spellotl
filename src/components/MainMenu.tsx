@@ -20,10 +20,11 @@ export const MainMenu: React.FC<Props> = ({ wordCount, isCustom, hasCustomList, 
   const showGames = !isCustom || hasCustomList;
 
   return (
-    <div id="main-content">
+    <section aria-labelledby="games-heading">
+      <h2 id="games-heading" className="sr-only">Choose a game</h2>
       {showGames && (
         <>
-          <div className="menu-grid" id="menu-grid">
+          <div className="menu-grid">
             {MODES.map(({ mode, icon, title, desc, cls }) => (
               <button
                 key={mode}
@@ -32,7 +33,7 @@ export const MainMenu: React.FC<Props> = ({ wordCount, isCustom, hasCustomList, 
                 type="button"
                 aria-label={`Start ${title}`}
               >
-                <span className="icon">{icon}</span>
+                <span className="icon" aria-hidden="true">{icon}</span>
                 <h3>{title}</h3>
                 <p>{desc}</p>
               </button>
@@ -41,11 +42,13 @@ export const MainMenu: React.FC<Props> = ({ wordCount, isCustom, hasCustomList, 
           <div className="word-count">
             <span>{wordCount} words available</span>
             {isCustom && hasCustomList && (
-              <button className="edit-list-btn" onClick={onEditList}>✏️ Edit List</button>
+              <button className="edit-list-btn" onClick={onEditList}>
+                <span aria-hidden="true">✏️ </span>Edit List
+              </button>
             )}
           </div>
         </>
       )}
-    </div>
+    </section>
   );
 };

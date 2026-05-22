@@ -90,11 +90,11 @@ export const WhichWord: React.FC<Props> = ({ words, onBack, streak, onCorrect, o
   const isCorrect = chosen === item.w;
 
   return (
-    <div className="game-area" aria-live="polite">
+    <div className="game-area">
       <GameHeader title="Which Word?" icon="🎯" score={score} total={totalQ} onBack={onBack} />
       <ProgressBar current={index} total={totalQ} />
       <div style={{ textAlign: 'center', padding: '1rem 0 0.5rem' }}>
-        <div style={{ fontSize: '13px', color: 'var(--muted)', marginBottom: '6px' }}>Word {Math.min(index + 1, totalQ)} of {totalQ}</div>
+        <div className="word-counter" aria-live="polite" aria-atomic="true">Word {Math.min(index + 1, totalQ)} of {totalQ}</div>
         <div className="quiz-prompt">{item.d}</div>
         <div className="quiz-instruction">Which word matches this definition?</div>
       </div>

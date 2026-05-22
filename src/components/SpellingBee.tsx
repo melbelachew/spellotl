@@ -131,43 +131,52 @@ export const SpellingBee: React.FC<Props> = ({ words, onBack, streak, onCorrect,
   }
 
   return (
-    <div className="game-area" aria-live="polite">
+    <div className="game-area">
       <GameHeader title="Spelling Bee" icon="🐝" score={score} total={totalQ} onBack={onBack} />
       <ProgressBar current={index} total={totalQ} />
       <div className="word-display">
-        <div style={{ fontSize: '13px', color: 'var(--muted)', marginBottom: '8px' }}>Word {Math.min(index + 1, totalQ)} of {totalQ}</div>
+        <div className="word-counter" aria-live="polite" aria-atomic="true">Word {Math.min(index + 1, totalQ)} of {totalQ}</div>
         <div className="bee-controls">
           <button
+            type="button"
             className={`tts-btn${speaking === 'hear' ? ' tts-playing' : ''}`}
             onClick={() => playAudio('hear', item.w)}
             disabled={speaking !== null}
             aria-label={speaking === 'hear' ? 'Playing audio' : 'Hear the word spoken aloud'}
-            aria-live="polite"
           >
-            {speaking === 'hear' ? <><span className="tts-icon">🔊</span> Playing…</> : <>🔊 Hear it</>}
+            {speaking === 'hear'
+              ? <><span className="tts-icon" aria-hidden="true">🔊</span> Playing…</>
+              : <><span aria-hidden="true">🔊 </span>Hear it</>}
           </button>
           <button
+            type="button"
             className={`tts-btn${speaking === 'spell' ? ' tts-playing' : ''}`}
             onClick={() => playAudio('spell', item.w)}
             disabled={speaking !== null}
             aria-label={speaking === 'spell' ? 'Playing audio' : 'Hear the word spoken and spelled out'}
-            aria-live="polite"
           >
-            {speaking === 'spell' ? <><span className="tts-icon">✏️</span> Playing…</> : <>✏️ Spell it</>}
+            {speaking === 'spell'
+              ? <><span className="tts-icon" aria-hidden="true">✏️</span> Playing…</>
+              : <><span aria-hidden="true">✏️ </span>Spell it</>}
           </button>
           {!showHint && (
-            <button className="tts-btn" onClick={() => setShowHint(true)} aria-label="Show hint">💡 Hint</button>
+            <button type="button" className="tts-btn" onClick={() => setShowHint(true)} aria-label="Show hint">
+              <span aria-hidden="true">💡 </span>Hint
+            </button>
           )}
         </div>
         {showHint && <div className="hint-text">{item.d}</div>}
-        <div className="spell-input-wrap">
+        <form
+          className="spell-input-wrap"
+          onSubmit={e => { e.preventDefault(); checkAnswer(); }}
+          aria-label="Spelling answer"
+        >
           <input
             ref={inputRef}
             className={`spell-input${inputState !== 'idle' ? ` ${inputState}` : ''}`}
             type="text"
             value={input}
             onChange={e => setInput(e.target.value)}
-            onKeyDown={e => { if (e.key === 'Enter') checkAnswer(); }}
             placeholder="Type the word..."
             autoComplete="off"
             autoCorrect="off"
@@ -175,14 +184,14 @@ export const SpellingBee: React.FC<Props> = ({ words, onBack, streak, onCorrect,
             disabled={checked}
             aria-label="Type your spelling"
           />
-          <button className="btn btn-primary" onClick={checkAnswer} disabled={checked}>Check</button>
-        </div>
+          <button type="submit" className="btn btn-primary" disabled={checked}>Check</button>
+        </form>
         {feedback && (
           <div className={`feedback ${inputState}`} role="alert">{feedback}</div>
         )}
         {checked && (
           <div className="next-btn-row">
-            <button className="btn btn-success" onClick={next}>
+            <button type="button" className="btn btn-success" onClick={next}>
               {index + 1 >= totalQ ? 'See Results' : 'Next Word →'}
             </button>
           </div>

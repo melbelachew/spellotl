@@ -52,8 +52,8 @@ export const CustomPanel: React.FC<Props> = ({ onLoad, onClear, initialValue = '
 
   return (
     <div className="custom-panel">
-      <h2>📋 Paste your word list</h2>
-      <p>Load a list to unlock the games below. One word per line — optionally add a definition after a colon: <em>catalyst: something that speeds up change</em></p>
+      <h2><span aria-hidden="true">📋 </span>Paste your word list</h2>
+      <p id="custom-input-hint">Load a list to unlock the games below. One word per line — optionally add a definition after a colon: <em>catalyst: something that speeds up change</em></p>
       <label htmlFor="custom-input" className="sr-only">Word list</label>
       <textarea
         id="custom-input"
@@ -63,7 +63,7 @@ export const CustomPanel: React.FC<Props> = ({ onLoad, onClear, initialValue = '
         onChange={e => setText(e.target.value)}
         onPaste={handlePaste}
         placeholder="catalyst: something that speeds up change"
-        aria-label="Word list — one word per line"
+        aria-describedby="custom-input-hint"
       />
       <div className="actions">
         <button className="btn btn-primary" onClick={handleLoad} style={{ padding: '8px 18px', fontSize: '13px' }}>
